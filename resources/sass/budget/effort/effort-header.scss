@@ -1,0 +1,18 @@
+.effort__header {
+  padding-bottom: 2rem;
+}
+
+.effort__header-link, .effort__header-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.effort__header-link:active, .effort__header-link:hover {
+  text-decoration: underline;
+}
+
+.effort__header-edit-contact td {
+  display: inline;
+  border: none;
+  font-size: 100%;
+}

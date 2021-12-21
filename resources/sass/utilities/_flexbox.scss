@@ -1,0 +1,8 @@
+.flex-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-columns div {
+  flex: 1 1 auto;
+}

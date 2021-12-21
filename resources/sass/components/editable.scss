@@ -1,0 +1,21 @@
+.editable {
+  background-image: url(#{$assetsPath}/icon--pencil-32-gray.gif);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+.editable:hover,
+.editable:active {
+  background-image: url(#{$assetsPath}/icon--pencil-32-black.gif);
+  background-color: lightyellow;
+}
+
+.table-tight td.editable {
+  padding: 0;
+}
+
+.table-tight .editable .button-block {
+  padding: .5rem .5rem;
+  cursor: pointer;
+}

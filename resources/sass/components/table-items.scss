@@ -1,0 +1,8 @@
+.table-items__total td,
+.table-tight .table-items__total td,
+.table-tight tr.table-items__total:nth-child(even) {
+  border: 1px solid transparent;
+  border-top: 2px solid $color-indigo-200;
+  background-color: transparent;
+  text-align: right;
+}

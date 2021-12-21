@@ -1,0 +1,31 @@
+
+.approval {
+  margin: 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  padding: 16px;
+}
+.approval .icon {
+  float: left;
+  width: 60px;
+  font-size: 40px;
+  color: #1f497d;
+}
+.approval .body {
+  margin-left: 61px;
+}
+.approval .description {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+.approval .quote {
+  border-left: 2px solid #ddd;
+  padding-left: 12px;
+  font-size: 12px;
+}
+.approval .description em {
+  color: #595959;
+}

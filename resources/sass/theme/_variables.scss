@@ -1,0 +1,46 @@
+/**
+ * This file is not currently in use (we are using a simple gulp concatenate pipeline for speed).
+ * It is here for reference and future SASS implementation.
+ *
+ * CR #:# indicates a color's contrast ratio on a white background
+ *        4.5:1 is the minimum for WCAG AA specification
+ */
+
+$link-color: #4272ad; // CR 4.95:1
+$link-hover-color: #1f497d;
+$link-background-highlight: #c6d9f0; // CR 6.32:1 with #1f497d text
+
+$h1-color: #974806; // CR 6.47:1
+$color-focus: #c6d9f0;
+
+$font-family-mono: 'Roboto Mono', "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+// Path
+// use in SCSS files background-image: url(#{$assetsPath}/checkbox--checked-white-bg.png);
+$assetsPath  : "/budgets/images";
+
+/* COE website branding colors, background colors for #fff text
+ * adjusted for WGCA AAA Large Text (14px+)
+ */
+$color-brand-blue: #0080a3;
+$color-brand-gray: #727679;
+$color-brand-green: #657e26;
+$color-brand-orange: #b75d2a;
+$color-brand-purple: #6a5982;
+$color-brand-yellow: #8e7106;
+
+$color-brand-blue-darker: #0f7994;
+$color-brand-gray-darker: #66696b;
+$color-brand-green-darker: #5d702e;
+$color-brand-orange-darker: #a85f38;
+$color-brand-purple-darker: #615573;
+$color-brand-yellow-darker: #806813;
+
+$color-brand-blue-lighter: #008bad;
+$color-brand-gray-lighter: #7e8285;
+$color-brand-green-lighter: #6f8a2b;
+$color-brand-orange-lighter: #c2612d;
+$color-brand-purple-lighter: #72618c;
+$color-brand-yellow-lighter: #997a08;
+
+$font-family-monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;

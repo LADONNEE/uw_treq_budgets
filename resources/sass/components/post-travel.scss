@@ -1,0 +1,40 @@
+.post-travel {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  grid-template-areas:
+    "label answer"
+    "note note";
+  padding: .75rem 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.post-travel:first-child {
+  border-top: 0 none;
+}
+
+.post-travel__label {
+  grid-area: label;
+  font-weight: normal;
+}
+
+.yes .post-travel__label {
+  font-weight: 600;
+}
+
+.post-travel__answer {
+  grid-area: answer;
+  color: #575757;
+  text-align: right;
+}
+
+.yes .post-travel__answer {
+  color: $color-red-800;
+  font-weight: 600;
+}
+
+.post-travel__note {
+  grid-area: note;
+  padding-left: 16px;
+  color: #444;
+  font-size: .875rem;
+}

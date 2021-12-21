@@ -1,0 +1,9 @@
+# Apache Configuration
+
+Add following to Apache configuration to make the Budgets application available from a top level URL directory on the server.
+
+    Alias /budgets "/www/budgets/public"
+
+    <Directory "/www/budgets/public">
+        Require all granted
+    </Directory>

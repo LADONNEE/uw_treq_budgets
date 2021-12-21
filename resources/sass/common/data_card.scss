@@ -1,0 +1,89 @@
+
+div.data_card {
+  margin: 1em 0;
+}
+div.data_card table {
+  width: auto;
+  margin: 0;
+  background-color: transparent;
+}
+div.data_card table th {
+  padding: 8px;
+  border: 1px solid #f3f3f3;
+  background-color: #f3f3f3;
+  font-size: 11px;
+  font-weight: normal;
+  color: #888;
+  text-align: right;
+}
+div.data_card tr.top_headings th {
+  padding-bottom: 2px;
+  text-align: left;
+}
+div.data_card table td {
+  padding: 8px;
+  border: 1px solid #f3f3f3;
+  background-color: transparent;
+  font-size: 12px;
+  color: #333;
+}
+div.data_card.identifiers {
+  float: right;
+  clear: right;
+  padding: 10px 0 10px 10px;
+  border-style: none;
+}
+div.data_card.identifiers table {
+  font-size: 14px;
+  font-weight: bold;
+}
+div.data_card.identifiers table th {
+  border-color: #dbe5f1;
+  background-color: #dbe5f1;
+  color: #366092;
+}
+div.data_card.identifiers table td {
+  border-color: #dbe5f1;
+  font-weight: bold;
+}
+
+div.data_card.primaries table th {
+  border-color: #dbe5f1;
+  background-color: #dbe5f1;
+  color: #366092;
+}
+div.data_card.primaries table td {
+  border-color: #dbe5f1;
+  font-weight: bold;
+}
+
+div.data_card.costs table td {
+  text-align: right;
+}
+
+div.data_card.sponsor {
+  padding: 10px 15px 15px 0;
+  border-style: none;
+  text-align: left;
+  font-size: 100%;
+}
+div.data_card.sponsor h4 {
+  margin-top: 0;
+  color: #494429;
+}
+div.data_card.sponsor ul {
+  margin: 0 0 0 20px;
+  list-style: disc outside;
+}
+div.data_card.sponsor ul li {
+  margin: .5em 0;
+  font-size: 100%;
+}
+div.data_card.sponsor ul h5 {
+  color: #666;
+  text-transform: uppercase;
+}
+
+div.data_card table.table-hover td {
+  cursor: pointer;
+}

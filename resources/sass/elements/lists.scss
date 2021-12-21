@@ -1,0 +1,26 @@
+
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none inside none;
+}
+ul.bullet {
+  margin-left: 20px;
+  list-style: disc inside;
+}
+ul.bullet li {
+  line-height: 1.5em;
+}
+
+dl,dt,dd {
+  font-size: 100%;
+}
+dt  {
+  margin: .75em 0 .25em 0;
+  color: #666;
+  font-size: 90%;
+}
+dd {
+  margin: .25em 0 1em 0;
+}

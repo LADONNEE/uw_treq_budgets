@@ -1,0 +1,25 @@
+.allocations-table th {
+  width: 16%;
+}
+
+.allocations-table th:nth-child(1) {
+  width: 20%;
+}
+
+.allocations-table th:nth-child(2) {
+  width: 13%;
+}
+
+.allocations-table th:nth-child(3) {
+  width: 19%;
+}
+
+.inline-flex-container {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.inline-flex-container__btn {
+  align-self: flex-end;
+}

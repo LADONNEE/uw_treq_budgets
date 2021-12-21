@@ -1,0 +1,30 @@
+.footer {
+  padding: 32px;
+  background: $color-gray-800;
+  color: $color-gray-400;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer a,
+.footer a:link,
+.footer a:visited {
+  text-decoration: none;
+  color: $color-white;
+}
+
+.footer .copyright {
+  margin-top: 8px;
+}
+
+.footer .copyright a,
+.footer .copyright a:link,
+.footer .copyright a:visited {
+  color: $color-gray-400;
+}
+
+.footer a:hover,
+.footer a:active {
+  color: $color-gray-200;
+}

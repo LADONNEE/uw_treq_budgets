@@ -1,0 +1,104 @@
+.panel {
+  padding: 1.25rem;
+  border: 0 none;
+  background-color: $color-white;
+  border-radius: .25rem;
+}
+
+.panel-ribbon {
+  height: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 5rem 1.25rem;
+  border-top: 0 none;
+  border-bottom: 0 none;
+  border-radius: 0;
+}
+
+.panel-area {
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 5rem 1.25rem;
+}
+
+.panel-full-width {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+}
+
+.panel-full-width .table-tight {
+  margin: 0;
+  border: 0 none;
+  border-bottom: 1px solid $color-indigo-200;
+}
+
+.table-tight.table-panel {
+  margin: 0;
+  border: 0 none;
+  border-bottom: 1px solid $color-indigo-200;
+}
+
+.panel-full-width .table-tight tr:last-child td {
+  border: 0 none;
+  border-bottom: 1px solid $color-indigo-200;
+}
+
+.panel-full-width .table-tight th,
+.panel-full-width .table-tight td {
+  border-bottom-color: $color-indigo-200;
+}
+
+.panel-full-width .table-tight th:first-child,
+.panel-full-width .table-tight td:first-child {
+  padding: .5rem .5rem .5rem 1.25rem;
+  border: 0 none;
+  border-bottom: 1px solid $color-indigo-200;
+}
+
+.panel-full-width .table-tight th:last-child,
+.panel-full-width .table-tight td:last-child {
+  padding: .5rem 1.25rem .5rem .5rem;
+  border: 0 none;
+  border-bottom: 1px solid $color-indigo-200;
+}
+
+.table-tight.table-panel th:first-child,
+.table-tight.table-panel td:first-child {
+  padding: .5rem .5rem .5rem 1.25rem;
+  border: 0 none;
+  border-bottom: 1px solid $color-indigo-200;
+}
+
+.table-tight.table-panel th:last-child,
+.table-tight.table-panel td:last-child {
+  padding: .5rem 1.25rem .5rem .5rem;
+  border: 0 none;
+  border-bottom: 1px solid $color-indigo-200;
+}
+
+.table-tight.table-panel tr:last-child td {
+  border: 0 none;
+  border-bottom: 1px solid $color-indigo-200;
+}
+
+.p-panel {
+  padding: 1.25rem !important
+}
+
+.py-panel,
+.pt-panel {
+  padding-top: 1.25rem !important;
+}
+
+.py-panel,
+.pb-panel {
+  padding-bottom: 1.25rem !important
+}
+
+.px-panel,
+.pl-panel {
+  padding-left: 1.25rem !important;
+}
+
+.px-panel,
+.pr-panel {
+  padding-right: 1.25rem !important
+}

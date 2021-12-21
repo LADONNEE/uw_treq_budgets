@@ -1,0 +1,49 @@
+.external-link {
+  display: inline-block;
+  max-width: 400px;
+}
+
+.external-link .button-block {
+  cursor: pointer;
+}
+
+.external-link i {
+  position: relative;
+  top: -1px;
+  color: #366092;
+  font-size: 12px;
+}
+
+.external-link__popup {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  grid-template-areas:
+     "label close"
+     "link close";
+  z-index: 900;
+  padding: 0;
+  border: 2px solid #95b3d7;
+  border-radius: 4px;
+  background-color: #ecf3fb;
+  color: black;
+  font-size: 13px;
+}
+
+.external-link__label {
+  grid-area: label;
+  padding: 8px 12px;
+}
+
+.external-link__link {
+  grid-area: link;
+  padding: 8px 12px;
+}
+
+.external-link__close {
+  grid-area: close;
+  border: 0 none;
+  background: transparent none;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 1.5rem;
+}

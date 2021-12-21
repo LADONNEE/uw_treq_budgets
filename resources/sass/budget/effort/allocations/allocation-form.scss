@@ -1,0 +1,30 @@
+.allocation__form .form-group {
+  width: 10rem;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.allocation__form .row {
+  margin: 0;
+}
+
+.allocation__form .form-check {
+  padding: 0;
+  margin-right: 1rem;
+}
+
+.allocation__type {
+  display: flex;
+  font-size: 14px;
+}
+
+.allocation__form .form-group.budget-group, .allocation__form .form-group.cross-unit-name-group {
+  width: 20rem;
+}
+
+.allocation__form .form-group.date-group {
+  width: 8.5rem;
+}
+
+.allocation__form .form-group.percent-group {
+  width: 9rem;
+}

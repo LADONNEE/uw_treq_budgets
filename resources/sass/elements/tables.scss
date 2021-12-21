@@ -1,0 +1,152 @@
+
+table {
+  width: 100%;
+  margin: 1em 0;
+  border-style: none;
+  border-collapse: collapse;
+}
+table th {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #aaa;
+  background-color: #ccc;
+  color: #666;
+  font-size: 85%;
+  font-weight: bold;
+}
+table td {
+  padding: 4px;
+  border: 1px solid #e9e9e9;
+}
+tr.oddrow td {
+  background-color: #f2f2f2;
+}
+table a,
+table a:link,
+table a:visited {
+  color: #33c;
+  text-decoration: none;
+}
+table a:hover,
+table a:active {
+  color: #006;
+  text-decoration: underline;
+}
+
+table.sortable th {
+  cursor: pointer;
+}
+table.sortable tr th.tablesorter-headerAsc {
+  background: #ccc url('/images/sort_up.png') no-repeat right 50%;
+}
+table.sortable tr th.tablesorter-headerDesc {
+  background: #ccc url('/images/sort_down.png') no-repeat right 50%;
+}
+
+table.properties {
+  width: auto;
+  border-style: none;
+}
+table.properties td {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: transparent;
+  font-size: 100%;
+}
+table.properties th {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #e9e9e9;
+  color: #444;
+  font-weight: normal;
+  font-size: 12px;
+}
+table.properties th.top_heading {
+  border-bottom: 1px solid #999;
+}
+
+table.sideways {
+  width: auto;
+}
+table.sideways th {
+  padding: 8px 10px;
+  border: 1px solid #aaa;
+  background-color: #ccc;
+  font-size: 100%;
+  text-align: right;
+  font-weight: normal;
+}
+table.sideways td {
+  font-size: 100%;
+  padding: 8px 10px;
+}
+
+table.transparent {
+  width: auto;
+  margin: 1em 0;
+  padding: 0;
+  border-style: none;
+  background-color: transparent;
+}
+table.transparent th {
+  padding: 0 12px 0 0;
+  border-style: none;
+  background-color: transparent;
+  font-size: 100%;
+}
+table.transparent td {
+  padding: 2px 16px 2px 0;
+  border-style: none;
+  background-color: transparent;
+  font-size: 100%;
+}
+tr.strike td {
+  color: #900;
+  text-decoration: line-through;
+}
+td.highlight {
+  background-color: #fff200;
+}
+tr.oddrow td.highlight {
+  background-color: #fff200;
+}
+
+table td label,
+table th label {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  text-decoration: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+table.align-top th {
+  vertical-align: top;
+}
+
+table.align-top td {
+  vertical-align: top;
+}
+
+table.align-baseline th {
+  vertical-align: baseline;
+}
+
+table.align-baseline td {
+  vertical-align: baseline;
+}
+
+table a.btn {
+  color: inherit;
+}
+
+.striped tr:nth-child(even) td {
+  background-color: #f2f2f2
+}
+
+td.focus {
+  border: 1px solid #c6d9f0;
+  border-bottom: 1px solid #dbe5f1;
+  background-color: #c6d9f0;
+}

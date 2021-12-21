@@ -1,0 +1,37 @@
+
+div.tt-menu {
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-color: #fff;
+}
+div.tt-suggestion {
+  margin: 0;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+div.tt-suggestion .tt-highlight {
+  font-weight: bold;
+}
+div.tt-suggestion.tt-cursor {
+  background-color: #ff3;
+}
+span.twitter-typeahead {
+  width: 100%;
+}
+.form-inline span.twitter-typeahead {
+  width: auto;
+}
+input[type="text"].item-selected {
+  background-image: url(#{$assetsPath}/icon-check-64.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 32px;
+}
+input[type="text"].item-changing {
+  background-image: url(#{$assetsPath}/icon-question-red-64.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 32px;
+}

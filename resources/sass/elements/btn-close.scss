@@ -1,0 +1,35 @@
+.btn-close {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 16px;
+  color: #777;
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  color: #900;
+}
+
+.btn-close:focus {
+  outline: 1px solid #4c5fc1;
+  outline-offset: -1px;
+}
+
+.btn-close:active {
+  transform: scale(0.99);
+}
+
+.btn-close-sm {
+  font-size: 12px !important
+}
+
+.btn-close-lg {
+  font-size: 24px !important
+}

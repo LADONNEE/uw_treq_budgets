@@ -1,0 +1,17 @@
+.form-row {
+  margin: 0 -10px;
+}
+
+.form-row .form-group {
+  margin: 0 10px 1rem 10px;
+}
+
+.form-row-stretch {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column-gap: 20px;
+}
+
+.form-row-stretch .form-group {
+  width: auto;
+}

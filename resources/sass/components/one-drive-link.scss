@@ -1,0 +1,45 @@
+.one-drive-link {
+  margin: 1.5rem 0;
+}
+
+.one-drive-link a,
+.one-drive-link a:link,
+.one-drive-link a:visited {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas:
+      "icon text"
+      "icon label";
+  border-radius: .25rem;
+  background-color: #0078d4;
+  color: #fff;
+  text-decoration: none;
+}
+
+.one-drive-link a:hover,
+.one-drive-link a:active {
+  background-color: #005799;
+  text-decoration: none;
+}
+
+.one-drive-link__icon {
+  grid-area: icon;
+  padding-top: .25rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #daedfb;
+}
+
+.one-drive-link__text {
+  grid-area: text;
+  padding-top: .25rem;
+  font-size: 1.125rem;
+}
+
+.one-drive-link__label {
+  grid-area: label;
+  padding-bottom: .25rem;
+  font-size: .75rem;
+  color: #daedfb;
+}
+

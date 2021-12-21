@@ -1,0 +1,24 @@
+.field {
+  margin-bottom: 1rem;
+}
+
+.field__label {
+  font-size: .75rem;
+  font-weight: bold;
+  color: #555555;
+}
+
+.field-row {
+  display: flex;
+}
+
+.field-row > .field {
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 500px) {
+  .fields-inline .field {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+}

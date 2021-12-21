@@ -1,0 +1,51 @@
+.page-with-help {
+  height: 100%;
+  padding: 1.25rem;
+  background-color: #fff;
+}
+
+.page-with-help__content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: .875rem;
+}
+
+.page-with-help__form {
+  flex: 1 0 475px;
+  padding: 1.25rem;
+}
+
+.page-with-help__help {
+  flex: 1 1 475px;
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+
+  h3 {
+    margin-bottom: .5rem;
+    font-size: .875rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  section {
+    margin-top: 2rem;
+  }
+
+  ul {
+    margin-left: 2rem;
+    list-style-type: disc;
+    list-style-position: outside;
+  }
+
+  strong {
+    font-weight: 600;
+    color: #444;
+  }
+}
+
+@media (max-width: 960px) {
+  .page-with-help__content {
+    display: block;
+  }
+}

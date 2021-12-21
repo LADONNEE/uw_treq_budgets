@@ -1,0 +1,28 @@
+.item-edit {
+  display: grid;
+  grid-template-columns: 60px 2fr 1fr 1fr;
+  grid-template-areas:
+    "qty name amount sub"
+    "url url url url"
+    "buttons buttons buttons buttons";
+  grid-gap: 16px;
+}
+
+.item-edit__qty { grid-area: qty }
+
+.item-edit__name { grid-area: name }
+
+.item-edit__amount { grid-area: amount }
+
+.item-edit__sub { grid-area: sub }
+
+.item-edit__url { grid-area: url }
+
+.item-edit__buttons { grid-area: buttons }
+
+.item-edit__amount .form-group,
+.item-edit__amount input,
+.item-edit__sub .form-group,
+.item-edit__sub input {
+  text-align: right;
+}

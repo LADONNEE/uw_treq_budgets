@@ -1,0 +1,443 @@
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  padding: .35em .625em .75em;
+  margin: 0 2px;
+  border: 1px solid #c0c0c0;
+}
+
+legend {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+input[type="radio"] {
+  vertical-align: top;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+input[type="text"],
+select,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #8db3e2;
+  box-shadow: 0 0 6px 0 rgba(84, 141, 212, 0.75);
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+input.address,
+textarea.address {
+  width: 362px;
+}
+
+input.date,
+textarea.date {
+  width: 15em;
+}
+
+input.name,
+textarea.name {
+  width: 175px;
+}
+
+textarea.grant_abstract {
+  width: 75%;
+  min-width: 400px;
+}
+
+input.number,
+textarea.number {
+  width: 5em;
+}
+
+input.phrase,
+textarea.phrase {
+  width: 500px;
+}
+
+input.text,
+textarea.text {
+  width: 300px;
+}
+
+input.usdollars,
+textarea.usdollars {
+  text-align: right;
+  background: url('/images/input_dollars_bg_image.gif') no-repeat left 50%;
+}
+
+fieldset {
+  margin: 1em 10px 0 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+fieldset legend {
+  font-size: 110%;
+  color: #21578a;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+fieldset p {
+  margin-top: 0;
+  font-size: 85%;
+  color: #666;
+}
+
+label {
+  margin: 0; /* remove Bootstrap 3 margin-bottom */
+}
+
+label em.required {
+  color: #c00;
+}
+
+.read_only_input {
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+.inputouterbox {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.labelbox {
+  display: block;
+  margin: 0 0 6px 0;
+}
+
+.labelbox label {
+  display: inline-block;
+  color: #595959;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.label-block {
+  display: block;
+  margin: 0 0 6px 0;
+  padding: 0;
+  border: none;
+  color: #595959;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.inputbox {
+  display: block;
+  margin: 0 0 6px 0;
+}
+
+.inputbox label {
+  margin: 0 0 2px 0;
+  color: inherit;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+.checkbox-label {
+  display: block;
+  padding: 2px 0;
+  color: inherit;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+.checkbox-label input {
+  margin-right: 6px;
+}
+
+.inputerror {
+  margin: 0 0 4px 0;
+  color: #c00000;
+  font-style: italic;
+}
+
+.inputouterbox .helptext {
+  margin: 0;
+  color: #76923c;
+  font-size: 11px;
+}
+
+.submitbox {
+  margin: 32px 0;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.inputbox.stacked input,
+.inputbox.stacked button,
+.inputbox.stacked select,
+.inputbox.stacked textarea {
+  margin-bottom: 8px;
+}
+
+.input_row {
+  margin: 0 0 1em 0;
+}
+
+.input_row .inputouterbox {
+  display: table-cell;
+  margin: 0;
+  padding-right: 12px;
+  vertical-align: top;
+}
+
+.input_grid {
+  display: table;
+}
+
+.input_grid .input_row {
+  display: table-row;
+}
+
+.input_grid .inputouterbox {
+  display: table-cell;
+  float: none;
+  padding: 0 20px 1em 0;
+}
+
+.input-width input,
+.input-width select,
+.input-width textarea,
+.input-width span.twitter-typeahead,
+.input-width span.twitter-typeahead input{
+  display: inline-block;
+  width: 100%;
+}
+
+.input-width input[type="submit"] {
+  display: inline-block;
+  width: auto;
+}
+
+.form_section {
+  float: left;
+  width: 100%;
+  border-left: 1px solid #595959;
+  border-right: 1px solid #595959;
+}
+
+.form_section.last {
+  border-bottom: 1px solid #595959;
+}
+
+.form_section div.liner {
+  padding: 12px;
+}
+
+.form_section h3 {
+  margin: 0;
+  padding: 12px;
+  border-top: 1px solid #595959;
+  background-color: #e3e3e3;
+}
+
+.form_section h3 span {
+  display: inline-block;
+  margin: -12px 8px -12px -12px;
+  padding: 12px 20px;
+  background-color: #595959;
+  color: #fff;
+}
+
+.form_section .two_column {
+  float: left;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.input_row.form-footer {
+  margin: 1em 0 2em 0;
+}
+
+.inline-checks {
+  margin-bottom: 12px;
+}
+
+.inline-checks label {
+  margin: 0 12px 8px 0;
+}
+
+/** new experiment for form with simpler markup **/
+
+.input-block {
+  display: block;
+  margin: 0 0 1em 0;
+}
+
+.input-block label {
+  display: block;
+  margin: 0 0 6px 0;
+  color: #595959;
+  font-weight: bold;
+}
+
+.input-block input,
+.input-block select,
+.input-block textarea {
+  display: block;
+  width: 100%;
+  margin: 0 0 8px;
+}
+
+.input-block .input-error {
+  margin: 0 0 4px 0;
+  color: #c00000;
+  font-style: italic;
+}
+
+.input-block .input-help {
+  margin: 0;
+  color: #76923c;
+  font-size: 11px;
+}
+
+.form-group-sm .input-block label {
+  margin-bottom: 4px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.city-state-zip {
+  display: grid;
+  grid-template-columns: minmax(200px, 2fr) 60px minmax(120px, 1fr);
+  grid-column-gap: 12px;
+}

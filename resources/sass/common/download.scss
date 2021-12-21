@@ -1,0 +1,19 @@
+div.download_link {
+  float: right;
+  clear: right;
+  margin: 1em 6px 8px 0;
+}
+
+div.download_link a,
+div.download_link a:link,
+div.download_link a:visited {
+  color: #548dd4;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+div.download_link a:hover,
+div.download_link a:active {
+  color: #1f497d;
+  text-decoration: underline;
+}

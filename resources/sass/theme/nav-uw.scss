@@ -1,0 +1,132 @@
+body {
+  padding-top: 66px;
+}
+
+.nav-uw {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 49px;
+  background: #4b2e83;
+  overflow: hidden;
+  z-index: 2000;
+  color: #fff;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.nav-uw__menu button {
+  padding: 8px 24px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.nav-uw__home-link,
+.nav-uw__home-link:link,
+.nav-uw__home-link:visited {
+  margin-left: 8px;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.nav-uw__home-link:hover,
+.nav-uw__home-link:active {
+  border-color: #fff;
+}
+
+.nav-uw__title {
+  margin-left: 8px;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.nav-uw__search button {
+  display: block;
+  padding: 12px 20px;
+}
+
+.nav-uw__mock-search {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 14px;
+  background: #b4a7c8;
+  color: #4b2e83;
+  cursor: pointer;
+}
+.nav-search-btn:hover,
+.nav-search-btn:active,
+.nav-search-btn:focus {
+  background: #fff;
+  color: #444;
+}
+
+.nav-uw__other-menu button {
+  padding: 9px 60px;
+}
+
+.nav-uw__other-menu svg {
+  display: inline-block;
+  height: 40px;
+  fill: currentColor;
+}
+
+#systems_menu {
+  padding-top: 48px;
+}
+
+.nav-uw__btn {
+  display: inline-block;
+  height: 50px;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: #4b2e83;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.nav-uw__btn:hover,
+.nav-uw__btn:focus {
+  background: #836bb3;
+}
+
+.nav-uw__btn:focus {
+  outline: 1px solid #4c5fc1;
+  outline-offset: -1px;
+}
+
+.nav-uw__btn:active {
+  transform: scale(0.99);
+}
+
+.nav-uw__btn--inactive,
+.nav-uw__btn--inactive:hover,
+.nav-uw__btn--inactive:focus,
+.nav-uw__btn--inactive:active {
+  outline: none;
+  outline-offset: 0;
+  transform: none;
+  background: #4b2e83;
+  cursor: initial;
+}
+
+@media only screen and (max-width: 576px) {
+  .nav-uw__other-menu button {
+    padding: 9px 20px;
+  }
+
+  #app #search-bar .search-input-box input {
+    width: 190px;
+  }
+}

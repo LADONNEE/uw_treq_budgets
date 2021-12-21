@@ -1,0 +1,131 @@
+.m-modal__mask {
+  display: table;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  transition: opacity .3s ease;
+}
+
+.m-modal__wrapper {
+  display: table-cell;
+  width: 100%;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.m-modal__container {
+  max-height: 100%;
+  overflow-y: auto;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+}
+
+.m-modal__mask.small .m-modal__container {
+  max-width: 320px;
+}
+
+.m-modal__mask.large .m-modal__container {
+  max-width: 720px;
+}
+
+.m-modal__close {
+  float: right;
+  margin: 0;
+}
+
+.m-modal__close button {
+  position: relative;
+  left: 16px;
+  top: -16px;
+  margin: 0;
+  padding: 0 4px;
+  border: none;
+  text-decoration: none;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+
+.m-modal__body {
+  clear: right;
+  margin: 20px 0;
+}
+
+.m-modal-enter-active {
+  transition: transform .3s ease-out;
+}
+
+.m-modal-enter .m-modal__mask {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.m-modal-enter .m-modal__container {
+  transform: translate(0, -25%);
+}
+
+.m-modal-leave-active .m-modal__mask {
+  transition: opacity .3s ease-out;
+  opacity: 0;
+}
+
+.m-modal-leave-active .m-modal__container {
+  transition: transform .3s ease-in, opacity .3s ease-out;
+  transform: translate(0, -50%);
+  opacity: 0;
+}
+
+.m-modal__mask.right {
+  display: block;
+}
+
+.right .m-modal__wrapper {
+  position: absolute;
+  display: block;
+  right: 0;
+  height: 100%;
+  max-width: 500px;
+  padding: 0;
+}
+
+.right .m-modal__container {
+  margin-left: 20px;
+}
+
+.m-modal__mask.right.small .m-modal__wrapper {
+  max-width: 320px;
+}
+
+.m-modal__mask.right.large .m-modal__wrapper {
+  max-width: 720px;
+}
+
+.right .m-modal__container {
+  height: 100%;
+  border-radius: 0;
+}
+
+.m-modal-enter.right .m-modal__container {
+  transform: translate(50%, 0);
+}
+
+.m-modal-leave-active.right .m-modal__container {
+  transform: translate(50%, 0);
+}

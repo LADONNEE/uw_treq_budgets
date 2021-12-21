@@ -1,0 +1,34 @@
+
+.empty,
+table td .empty {
+  color: #898989;
+}
+a.empty,
+a.empty:link,
+a.empty:visited {
+  color: #898989;
+}
+a.empty:hover,
+a.empty:active {
+  color: #006;
+}
+
+.empty a,
+.empty a:link,
+.empty a:visited {
+  color: #898989;
+}
+.empty a:hover,
+.empty a:active {
+  color: #006;
+}
+
+div.emptytable {
+  clear: both;
+  margin: 1em 0;
+  padding: 15px;
+  border: 1px solid #999;
+  background-color: #e3e3e3;
+  font-size: 100%;
+  color: #666;
+}

@@ -1,0 +1,27 @@
+.jump-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.jump-nav a,
+.jump-nav a:link,
+.jump-nav a:visited {
+  display: block;
+  padding: .5rem 1rem;
+  background-color: transparent;
+  color: #33c;
+  text-decoration: none;
+}
+
+.jump-nav .badge {
+  margin-left: 6px;
+  color: white;
+  background-color: #33c;
+}
+
+.jump-nav__anchor {
+  position: relative;
+  top: -80px;
+  height: 1px;
+  visibility: hidden;
+}

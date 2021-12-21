@@ -1,0 +1,72 @@
+.task-list {
+  margin: 0 0 2rem 0;
+  width: 36rem;
+}
+
+.task-list .task {
+  display: grid;
+  grid-template-columns: 70px auto 25px;
+  margin: 0 0 1rem 0;
+  font-size: .875rem;
+}
+
+.task .task__name {
+  font-size: 1rem;
+  margin: .5rem 0 0 0;
+}
+
+.task-card {
+  padding: 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+.task-list .task.task-card {
+  margin: 0 0 2rem 0;
+}
+
+.task-card section {
+  margin: 1rem 0;
+}
+
+.task__trash-icon {
+  color: red;
+  font-size: 16px;
+  float: right;
+}
+
+.task__icon {
+  text-align: center;
+  font-size: 32px;
+}
+
+.task-collapsed .task__icon {
+  font-size: 24px;
+}
+
+.task-collapsed .task__collapse {
+  align-self: center;
+}
+
+.task__collapse {
+  color: #404040;
+}
+
+.task-card .quote {
+  margin: .5rem 0 1rem 0;
+  border-left: 2px solid #ddd;
+  padding-left: 12px;
+  font-size: 12px;
+  white-space: pre-line;
+}
+
+.task-card.create {
+  background-color: #f6f6f6;
+  border-color: #999;
+}
+
+.task-card.create .task__icon {
+  color: #007bff;
+}

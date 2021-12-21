@@ -1,0 +1,10 @@
+.project-number {
+  font-family: $font-family-mono;
+}
+
+h1 .project-number {
+  display: block;
+  margin: 0 0 .5rem 0;
+  color: black;
+  letter-spacing: 1px;
+}

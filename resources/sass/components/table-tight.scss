@@ -1,0 +1,43 @@
+.table-tight {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  border-bottom-color: $color-indigo-200;
+  border-collapse: collapse;
+}
+
+.table-tight th {
+  padding: .5rem .5rem;
+  border: 1px solid transparent;
+  border-bottom-color: $color-indigo-200;
+  background-color: $color-indigo-200;
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: $color-indigo-900;
+  vertical-align: baseline;
+}
+
+.table-tight td {
+  padding: .5rem .5rem;
+  border: 1px solid transparent;
+  border-bottom-color: $color-indigo-200;
+  background-color: transparent;
+  font-size: .875rem;
+  vertical-align: baseline;
+}
+
+.table-tight tr.evenrow td {
+  background-color: $color-indigo-100;
+}
+
+.table-tight tr.oddrow td {
+  background-color: #fff;
+}
+
+.table-tight tr:nth-child(even) {
+  background-color: $color-indigo-100;
+}
+

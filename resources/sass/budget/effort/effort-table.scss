@@ -1,0 +1,22 @@
+table.effort-table th {
+  background-color: #c6d9f0;
+  border: none;
+}
+
+.effort-table tr td, .effort-table tr.oddrow td, .effort-table tr.evenrow td {
+  background-color: unset;
+  border: none;
+  border-top: 1px solid #dee2e6;
+  font-size: 0.875rem;
+}
+
+.effort-table tbody tr:hover {
+  background-color: rgb(159 189 220 / 25%);
+}
+
+.effort-table tr td.table-separator {
+  background-color: #ffffff;
+  border: none;
+  border-top: 1px solid #dee2e6;
+  padding: .45rem;
+}

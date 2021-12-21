@@ -1,0 +1,79 @@
+# Initial Install
+
+While we have a more automated system for updates (deploy utility) the initial install of the project on
+a server is a manual process.
+
+## Deploy User
+
+Add eddploy to project repo and any submodules the project is using. READ access.
+
+
+## Create Database
+
+DROP DATABASE IF EXISTS budgets;
+CREATE DATABASE budgets;
+
+-- Generate a password and update the local .env file
+CREATE USER 'budgets'@'localhost' IDENTIFIED BY '__create_a_new_ugly_password_for_this_server__';
+GRANT ALL PRIVILEGES ON budgets.* to 'budgets'@'localhost';
+GRANT SELECT ON shared.* TO 'budgets'@'localhost';
+
+FLUSH PRIVILEGES;
+QUIT;
+
+
+## Setup Local Directories
+
+> as root
+
+sudo su -
+mkdir -p /www/local/budgets
+touch /www/local/budgets/.env
+
+exit
+
+## Deploy the Project
+
+> as regular user with sudo privileges
+
+deploy budgets run install.sh
+
+
+## Configure .env
+
+sudo vi /www/local/budgets/.env
+
+Can copy this from local work environment, then update:
+
+. environment name
+. app base URL
+. environment's database password
+. add DB_USERNAME_EDW and DB_PASSWORD_EDW
+
+
+## Run Migrations
+
+cd /www/budgets
+php artisan migrate
+
+## Copy data from educ to budgets
+mysql -u <<USERNAME>> -p < /www/budgets/database/migrations/sql/20200727_migrate_budgets_tables.sql
+
+## Configure Apache
+
+sudo vi /etc/httpd/conf.d/alias.conf
+
+Alias /budgets "/www/budgets/public"
+
+sudo vi /etc/httpd/conf.d/directories.conf
+
+<Directory "/www/budgets/public">
+	Require all granted
+</Directory>
+
+sudo vi /etc/httpd/conf.d/redirects.conf
+
+RedirectMatch ^/budget$/?      /budgets
+RedirectMatch ^/budget/(.*)$   /budgets/$1
+
+sudo systemctl restart httpd

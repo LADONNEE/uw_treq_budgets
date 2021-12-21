@@ -1,0 +1,34 @@
+.budget-block {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-areas:
+    "budget pca split"
+    "name name name";
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.budget-block:first-child {
+  border-top: 0 none;
+}
+
+.budget-block__budgetno {
+  grid-area: budget;
+  font-weight: 600;
+}
+
+.budget-block__name {
+  grid-area: name;
+  color: #575757;
+  font-size: .875rem;
+}
+
+.budget-block__pca {
+  grid-area: pca;
+  color: #575757;
+}
+
+.budget-block__split {
+  grid-area: split;
+  text-align: right;
+}

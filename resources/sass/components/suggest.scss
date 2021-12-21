@@ -1,0 +1,16 @@
+.suggest-list {
+  position: absolute;
+  z-index: 1035;
+  border: 1px solid #7b9dd4;
+  background-color: #fff;
+}
+
+.suggest-item {
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.suggest-item.current {
+  background-color: #1e90ff;
+  color: #fff;
+}

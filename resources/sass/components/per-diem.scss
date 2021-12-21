@@ -1,0 +1,50 @@
+.per-diem__row {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  grid-template-areas:
+    "heading heading"
+    "instructions inputs";
+  grid-column-gap: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.per-diem__heading { grid-area: heading; }
+.per-diem__instructions { grid-area: instructions; }
+.per-diem__inputs { grid-area: inputs; }
+
+.per-diem__heading {
+  margin: 0 0 .5rem 0;
+  border-bottom: 1px solid $color-gray-400;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $color-gray-900;
+}
+
+.per-diem__instructions {
+  margin: 0 0 0 1rem;
+  font-size: .75rem;
+  list-style: disc outside;
+}
+
+.per-diem__instructions li {
+  margin: .25rem 0;
+}
+
+.per-diem__label {
+  margin-bottom: .5rem;
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.per-diem__calculated {
+  min-height: 24px;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+  padding: 6px 12px;
+}
+
+.per-diem__help {
+  padding: 6px 12px;
+  font-size: .75rem;
+  color: $color-green-700;
+}

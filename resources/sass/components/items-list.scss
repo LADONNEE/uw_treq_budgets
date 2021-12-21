@@ -1,0 +1,36 @@
+.items-list {
+  width: 100%;
+}
+
+.items-list th {
+  border: 0 none;
+  background-color: $color-gray-100;
+  color: $color-gray-600;
+  font-size: .875rem;
+  font-weight: 600;
+  padding: .25rem .75rem;
+}
+
+.items-list td {
+  border: 1px solid #ddd;
+}
+
+.items-list .button-block {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.items-list__amount {
+  width: 10rem;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.items-list__url {
+  width: 5rem;
+}
+
+.items-list .deleting td {
+  color: #900;
+  text-decoration: line-through;
+}

@@ -1,0 +1,35 @@
+.ariba {
+  margin: 0 0 1.25rem 0;
+}
+
+.ariba__item {
+  margin-bottom: .75rem;
+}
+
+.ariba__ref {
+  display: block;
+  padding: 0;
+  border: 1px solid transparent;
+  background: none;
+  text-align: left;
+  font-family: $font-family-mono;
+  font-size: 1.125rem;
+}
+
+.ariba__ref:hover,
+.ariba__ref:focus {
+  border: 1px solid $color-blue-300;
+}
+
+.ariba__description {
+  font-size: .75rem;
+}
+
+.ariba__posted {
+  font-size: .75rem;
+  color: #575757;
+}
+
+.ariba__form {
+  margin: 1rem 0;
+}

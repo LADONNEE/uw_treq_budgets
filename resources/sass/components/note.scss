@@ -1,0 +1,55 @@
+.section-note {
+  border: 1px solid #a69421;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background-color: #fae664;
+  -webkit-box-shadow: 0 4px 8px -2px rgba(204,204,204,1);
+  -moz-box-shadow: 0 4px 8px -2px rgba(204,204,204,1);
+  box-shadow: 0 4px 8px -2px rgba(204,204,204,1);
+  font-size: 14px;
+}
+
+.section-note p {
+  margin: 0 0 .5rem 0;
+}
+
+.section-note .author {
+  margin: 0 0 .5rem 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+
+.section-note .author span {
+  padding-left: 8px;
+  color: #595959;
+  font-weight: normal;
+}
+
+.note__row .section-note__width {
+  display: inline-block;
+  width: 20rem;
+  margin: 0 1rem 1rem 0;
+}
+
+.note__column .section-note__width,
+.note__column .section-note {
+  width: auto;
+  max-width: 25rem;
+}
+
+.section-note__button {
+  font-weight: 400;
+  color: #007bff;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  background: none;
+}
+
+.section-note__button:hover {
+  color: #0056b3;
+  text-decoration: underline;
+  background: none;
+}
