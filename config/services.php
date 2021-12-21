@@ -14,7 +14,7 @@ return [
     |
     */
 
-    // Send user authorization change notifications to EDUC Person log
+    // Send user authorization change notifications to COLLEGE Person log
     'auth_notify' => [
         'url' => env('AUTH_NOTIFY_URL'),
         'token' => env('AUTH_NOTIFY_TOKEN'),

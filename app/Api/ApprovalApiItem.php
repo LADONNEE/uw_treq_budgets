@@ -25,7 +25,7 @@ class ApprovalApiItem
     public $icon;
     public $id;
     public $isApproved;
-    public $isCoepay;
+    public $isCoenvpay;
     public $isComplete;
     public $isReportComplete;
     public $isSentBack;
@@ -53,12 +53,12 @@ class ApprovalApiItem
         $this->id = $approval->id;
         $this->creator = "{$approval->effortReport->creator->firstname} {$approval->effortReport->creator->lastname}";
         $this->createdAt = eDate($approval->effortReport->created_at);
-        $this->isCoepay = $approval->isCoePay();
+        $this->isCoenvpay = $approval->isCoePay();
         $this->type = $approval->type;
         $this->sequence = $approval->sequence;
         $this->description = $approval->effortReport->description;
         $this->assigned_to = $approval->assigned_to_contact_id;
-        $this->assignee = $this->isCoepay ? 'COE Pay' : "{$approval->assignee->firstname} {$approval->assignee->lastname}";
+        $this->assignee = $this->isCoenvpay ? 'COENV Pay' : "{$approval->assignee->firstname} {$approval->assignee->lastname}";
         $this->response = $approval->response;
         $this->message = $approval->message;
         $this->isComplete = $approval->isComplete();
@@ -140,7 +140,7 @@ class ApprovalApiItem
             return "{$this->creator} marked this as approval not needed from {$this->assignee}";
         }
 
-        if ($this->isApproved && $this->isCoepay) {
+        if ($this->isApproved && $this->isCoenvpay) {
             return "Entered in Workday";
         }
 

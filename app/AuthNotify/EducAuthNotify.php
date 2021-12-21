@@ -3,16 +3,16 @@
 namespace App\AuthNotify;
 
 /**
- * Send a notification of user authorization changes to EDUC Person project
+ * Send a notification of user authorization changes to COLLEGE Person project
  */
-class EducAuthNotify
+class CollegeAuthNotify
 {
     private $curlOptions = [
         CURLOPT_RETURNTRANSFER => true, // return result instead of echoing
         CURLOPT_SSL_VERIFYPEER => false, // stop cURL from verifying the peer's certificate
         CURLOPT_FOLLOWLOCATION => true, // follow redirects, Location: headers
         CURLOPT_MAXREDIRS      => 10, // but dont redirect more than 10 times
-        CURLOPT_USERAGENT      => 'PhpRestClient:EducAuthNotify', // identify the user agent to the server
+        CURLOPT_USERAGENT      => 'PhpRestClient:CollegeAuthNotify', // identify the user agent to the server
     ];
 
     private $name;
@@ -56,7 +56,7 @@ class EducAuthNotify
 
         curl_setopt($curl, CURLOPT_POST, 1);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $postData);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, ['Uw-Educ-Token: ' . $this->token]);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, ['Uw-College-Token: ' . $this->token]);
         curl_setopt($curl, CURLOPT_URL, $this->url);
 
         curl_exec($curl);

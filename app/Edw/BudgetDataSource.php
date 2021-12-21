@@ -24,7 +24,7 @@ class BudgetDataSource
      * Returns an array of rows from the EDW which contain budget data
      * @return array
      */
-    public function getEducBudgets()
+    public function getCollegeBudgets()
     {
         $sql = sqlInclude(__DIR__ . '/Queries/sql/budgets.sql', [
             '__BIENNIUMS__' => $this->bienniums(app('bienniums')),

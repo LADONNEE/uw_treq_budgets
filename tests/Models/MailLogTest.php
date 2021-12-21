@@ -24,12 +24,12 @@ class MailLogTest extends TestCase
 
         $it->setMetadata([
             'effort_report_id' => 99,
-            'email' => 'edmailbx@uw.edu',
+            'email' => 'envmailbx@uw.edu',
             'foo' => 'hello'
         ]);
 
         $this->assertEquals(99, $it->effort_report_id);
-        $this->assertSame('edmailbx@uw.edu', $it->email);
+        $this->assertSame('envmailbx@uw.edu', $it->email);
         $this->assertSame('{"foo":"hello"}', $it->metadata);
     }
 }

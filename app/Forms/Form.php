@@ -2,7 +2,7 @@
 namespace App\Forms;
 
 use Illuminate\Database\Eloquent\Model;
-use Uwcoews\Formkit\Form as FormkitForm;
+use Uwcoenvws\Formkit\Form as FormkitForm;
 
 abstract class Form extends FormkitForm
 {

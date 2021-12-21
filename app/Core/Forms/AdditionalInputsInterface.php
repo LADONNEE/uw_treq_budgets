@@ -1,6 +1,6 @@
 <?php
 /**
- * @package edu.uw.education.pcore
+ * @package edu.uw.environment.pcore
  */
 
 /**

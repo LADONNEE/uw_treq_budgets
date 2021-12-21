@@ -1,10 +1,10 @@
 <?php
 /**
- * @package edu.uw.education.educ
+ * @package edu.uw.environment.college
  */
 
 /**
- * Adds and removes user authorizations within the EDUC project
+ * Adds and removes user authorizations within the COLLEGE project
  */
 
 namespace App\Auth;

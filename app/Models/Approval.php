@@ -43,7 +43,7 @@ class Approval extends Model
     const TYPE_DEFAULT_BUDGET = 'DEFAULT BUDGET';
     const TYPE_FACULTY = 'FACULTY';
     const TYPE_APPROVAL = 'APPROVAL';
-    const TYPE_COEPAY = 'COE PAY';
+    const TYPE_COENVPAY = 'COENV PAY';
 
     const RESPONSE_APPROVED = 'APPROVED';
     const RESPONSE_SENTBACK = 'SENT BACK';
@@ -100,9 +100,9 @@ class Approval extends Model
         return $this->response === self::RESPONSE_SENTBACK;
     }
 
-    public function isCoepay()
+    public function isCoenvpay()
     {
-        return $this->type === self::TYPE_COEPAY;
+        return $this->type === self::TYPE_COENVPAY;
     }
 
     public function isReadyToApprove()

@@ -30,7 +30,7 @@ class ImportUwBudgetsTask
     public function run()
     {
         $this->setUpdating();
-        $results = $this->edw->getEducBudgets();
+        $results = $this->edw->getCollegeBudgets();
         foreach ($results as $row) {
             $data = $this->parseRow($row);
             $budget = UwBudget::firstOrNew([

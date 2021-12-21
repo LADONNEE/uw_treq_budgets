@@ -7,12 +7,12 @@ use Illuminate\Support\Facades\DB;
 /**
  * Decorator that provides multiple users roles as a single standardized string.
  *
- * The logic of choosing which roles should be reported to EDUC Person auth log
- * is generally embedded in a view in the `shared` database. This allows EDUC
+ * The logic of choosing which roles should be reported to COLLEGE Person auth log
+ * is generally embedded in a view in the `shared` database. This allows COLLEGE
  * Person to handle one off notifications and to run nightly bulk user imports
  * and get the same role values from each.
  */
-class EducAuthNotifyMultipleRoles extends EducAuthNotify
+class CollegeAuthNotifyMultipleRoles extends CollegeAuthNotify
 {
     /**
      * Table that provides a row per UW NetID with single string summary of multiple rows.

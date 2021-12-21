@@ -86,7 +86,7 @@
             <div id="workday" style="display: none">
                 <ul>
                     <li class="pl-3">
-                        Gives user access to the "Entered in Workday" button on the COE Pay approvals on Faculty Effort Reports.
+                        Gives user access to the "Entered in Workday" button on the COENV Pay approvals on Faculty Effort Reports.
                     </li>
                 </ul>
             </div>

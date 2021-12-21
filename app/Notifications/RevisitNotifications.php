@@ -25,7 +25,7 @@ class RevisitNotifications extends BaseNotification
             return null;
         }
 
-        return new PendingEmailHeader($effortReport, "coepay@uw.edu", 'Revisit Effort Report');
+        return new PendingEmailHeader($effortReport, "coenvpay@uw.edu", 'Revisit Effort Report');
     }
 
     public function notifyItem($id)
@@ -36,6 +36,6 @@ class RevisitNotifications extends BaseNotification
             return;
         }
 
-        $this->sender->send($effortReport->id, "coepay@uw.edu", new RevisitMail($effortReport));
+        $this->sender->send($effortReport->id, "coenvpay@uw.edu", new RevisitMail($effortReport));
     }
 }

@@ -1,9 +1,9 @@
 <?php
 namespace App\Auth;
 
-use Uwcoews\Aclkit\Contracts\UserWithRoles;
+use Uwcoenvws\Aclkit\Contracts\UserWithRoles;
 
-class UserProvider implements \Uwcoews\Aclkit\Contracts\UserProvider
+class UserProvider implements \Uwcoenvws\Aclkit\Contracts\UserProvider
 {
     protected $current;
 

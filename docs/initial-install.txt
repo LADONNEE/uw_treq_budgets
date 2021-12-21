@@ -56,7 +56,7 @@ Can copy this from local work environment, then update:
 cd /www/budgets
 php artisan migrate
 
-## Copy data from educ to budgets
+## Copy data from educ / college to budgets
 mysql -u <<USERNAME>> -p < /www/budgets/database/migrations/sql/20200727_migrate_budgets_tables.sql
 
 ## Configure Apache

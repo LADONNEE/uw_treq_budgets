@@ -3,7 +3,7 @@ namespace App\Auth;
 
 class UwIdentityLocator
 {
-    const SPOOF_SESSION_KEY = 'EDUC_SPOOF_UWNETID';
+    const SPOOF_SESSION_KEY = 'COLLEGE_SPOOF_UWNETID';
     /**
      * Prioritized methods for locating a login indentity
      * @var array

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package edu.uw.education.educ
+ * @package edu.uw.environment.college
  */
 
 namespace App\Providers;

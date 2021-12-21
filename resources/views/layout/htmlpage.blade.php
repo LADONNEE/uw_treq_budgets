@@ -5,7 +5,7 @@
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title') - {{ config('app.name') }} - COE - UW</title>
+    <title>@yield('title') - {{ config('app.name') }} - COENV - UW</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
     @yield('style')
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -65,13 +65,13 @@
     </div> <!-- /.layout__wrapper -->
     <div class="layout__footer footer">
         <div>
-            <a href="mailto:edhelp@uw.edu?subject=COE%20Website%20Question">@icon('envelope') Contact</a> &bull;
-            <a href="https://www.education.uw.edu/technologycenter/get-help/">Help</a> &bull;
+            <a href="mailto:envithelp@uw.edu?subject=COENV%20Website%20Question">@icon('envelope') Contact</a> &bull;
+            <a href="https://environment.uw.edu/intranet/technology-resources">Help</a> &bull;
             <a href="http://www.washington.edu/online/privacy">Privacy</a> &bull;
             <a href="http://www.washington.edu/online/terms">Terms</a>
         </div>
         <div class="copyright">
-            <a href="http://education.uw.edu/">&#169;{{ date('Y') }} UW College of Education</a>,
+            <a href="http://environment.uw.edu/">&#169;{{ date('Y') }} UW College of the Environment</a>,
             <a href="http://www.seattle.gov/">Seattle, Washington</a>
         </div>
     </div>
