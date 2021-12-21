@@ -1,0 +1,6 @@
+[submodule "packages/uwcoenvws/aclkit"]
+	path = packages/uwcoenvws/aclkit
+	url = git@gl2.ladonnee.com:customers/uwashington/coenv/aclkit.git
+[submodule "packages/uwcoenvws/formkit"]
+	path = packages/uwcoenvws/formkit
+	url = git@gl2.ladonnee.com:customers/uwashington/coenv/formkit.git
