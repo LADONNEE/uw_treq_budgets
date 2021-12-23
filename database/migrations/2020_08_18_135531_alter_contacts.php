@@ -12,7 +12,7 @@ class AlterContacts extends Migration
             $table->boolean('is_faculty')->default(0)->after('email');
             $table->boolean('is_80_20')->default(0)->after('is_faculty');
             $table->unsignedBigInteger('default_budget_id')->nullable()->after('is_faculty');
-            $table->unsignedBigInteger('fiscal_contact_id')->nullable()->after('default_budget_id');
+            $table->unsignedBigInteger('fiscal_person_id')->nullable()->after('default_budget_id');
             $table->date('end_at')->nullable()->after('created_at');
             $table->unique('person_id');
             $table->unique('uwnetid');
@@ -24,7 +24,7 @@ class AlterContacts extends Migration
                 ->on('budgets')
                 ->onDelete('cascade');
 
-            $table->foreign('fiscal_contact_id')
+            $table->foreign('fiscal_person_id')
                 ->references('id')
                 ->on('contacts')
                 ->onDelete('cascade');
