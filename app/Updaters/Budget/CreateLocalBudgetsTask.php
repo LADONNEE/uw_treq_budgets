@@ -63,7 +63,7 @@ class CreateLocalBudgetsTask
             'budgetno' => $uw->budgetno
         ]);
         if (!$budget->pi_person_id && $uw->PrincipalInvestigatorId) {
-            $contact = $this->importContact($uw->PrincipalInvestigator, $uw->PrincipalInvestigatorId);
+            $contact = $this->importContact($uw->PrincipalInvestigator ?? 'Firstname Lastname', $uw->PrincipalInvestigatorId);
             $budget->pi_person_id = $contact->person_id;
         }
         $budget->save();
