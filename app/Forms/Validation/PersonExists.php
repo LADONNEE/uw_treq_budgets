@@ -2,7 +2,7 @@
 namespace App\Forms\Validation;
 
 use App\Models\Person;
-use Uwcoenvws\Formkit\Validators\BaseValidator;
+use Uwuaaws\Formkit\Validators\BaseValidator;
 
 class PersonExists extends BaseValidator
 {
