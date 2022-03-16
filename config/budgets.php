@@ -6,16 +6,16 @@
 return [
     'scope' => [
         'college-codes' => [
-            '263' => 'COLLEGE OF ENVIRNMNT',
+            '282' => 'UNDERGRADUATE ACADEMIC AFFAIRS',
         ],
         'org-codes' => [
-            '2552158000' => 'CHANGE FOR ENVIRONMENT',
+            '2820001000' => 'UAA ADMINISTRATION',
 /*            '2552258000' => 'AP CR CERT-EDUCATION',
             '2552558000' => 'AP NC STAL-EDUCATION',
             '2800258010' => 'SQ-EDUCATION',
 */        ],
         'budgets' => [
-            '746212' => 'COENV MARCOM',
+            '061303' => 'UAA ADMINISTRATION',
         ],
     ]
 ];
