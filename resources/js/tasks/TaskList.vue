@@ -11,7 +11,7 @@
         <task-create v-if="mode ==='task'" :save="saveTask" @closed="closeForm"></task-create>
         <div v-if="!store.reportComplete">
             <button class="btn btn-light" v-if="store.canAddApprover" @click="mode = 'approval'">&plus; Request Approval</button>
-            <button class="btn mt-2" v-if="store.userIsAdmin && store.reportStage !== 'COENV PAY'" @click="showAlert = !showAlert">Admin Override Approvals</button>
+            <button class="btn mt-2" v-if="store.userIsAdmin && store.reportStage !== 'UAA PAY'" @click="showAlert = !showAlert">Admin Override Approvals</button>
             <approval-express
                 v-if="showAlert"
                 @closeExpress="showAlert = false"

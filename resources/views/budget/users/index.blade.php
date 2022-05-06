@@ -19,7 +19,7 @@
         <li><strong>Budget Manager</strong> - can be assigned as Budget Manager</li>
         <li><strong>Manage Faculty</strong> - can edit faculty information on Manage Faculty page</li>
         <li><strong>Approve on Behalf</strong> - can approve Effort Reports on behalf of budget approvers</li>
-        <li><strong>Workday</strong> - can mark Effort Reports "Entered in Workday" on COENV Pay approvals</li>
+        <li><strong>Workday</strong> - can mark Effort Reports "Entered in Workday" on UAA Pay approvals</li>
     </ul>
 
     <h3>Add a User</h3>

@@ -5,7 +5,7 @@
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title') - {{ config('app.name') }} - COENV - UW</title>
+    <title>@yield('title') - {{ config('app.name') }} - UAA - UW</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
     @yield('style')
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -13,7 +13,7 @@
           crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/budgets/css/app.css{{ $cacheBusting = '?v=' . config('view.resource_cache') }}" media="all" />
     <link rel="stylesheet" type="text/css" href="/style/context_menu.css{{ $cacheBusting }}" media="all" />
-    <link rel="stylesheet" type="text/css" href="/coenv-util/css/env-warning.css{{ $cacheBusting }}" media="all" />
+    <link rel="stylesheet" type="text/css" href="/uaa-util/css/env-warning.css{{ $cacheBusting }}" media="all" />
     <script defer src="https://kit.fontawesome.com/96343af987.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
@@ -65,13 +65,13 @@
     </div> <!-- /.layout__wrapper -->
     <div class="layout__footer footer">
         <div>
-            <a href="mailto:envithelp@uw.edu?subject=COENV%20Website%20Question">@icon('envelope') Contact</a> &bull;
-            <a href="https://environment.uw.edu/intranet/technology-resources">Help</a> &bull;
+            <a href="mailto:uaatreq@uw.edu?subject=UAA%20Website%20Question">@icon('envelope') Contact</a> &bull;
+            <a href="https://uw.edu/uaa">Help</a> &bull;
             <a href="http://www.washington.edu/online/privacy">Privacy</a> &bull;
             <a href="http://www.washington.edu/online/terms">Terms</a>
         </div>
         <div class="copyright">
-            <a href="http://environment.uw.edu/">&#169;{{ date('Y') }} UW College of the Environment</a>,
+            <a href="https://uw.edu/uaa">&#169;{{ date('Y') }} UW Undergraduate Academic Affairs</a>,
             <a href="http://www.seattle.gov/">Seattle, Washington</a>
         </div>
     </div>
@@ -92,7 +92,7 @@
 @yield('state')
 <script type="text/javascript" src="/budgets/js/app.js{{ $cacheBusting }}"></script>
 <script type="text/javascript" src="/js/context_menu_jquery.js{{ $cacheBusting }}"></script>
-<script type="text/javascript" src="/coenv-util/js/env-warning.js{{ $cacheBusting }}"></script>
+<script type="text/javascript" src="/uaa-util/js/env-warning.js{{ $cacheBusting }}"></script>
 @yield('scripts')
 </body>
 </html>

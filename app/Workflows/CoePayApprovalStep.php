@@ -6,12 +6,12 @@ use App\Models\EffortReport;
 
 class CoePayApprovalStep extends ApprovalsStep
 {
-    public $stage = EffortReport::STAGE_COENVPAY;
+    public $stage = EffortReport::STAGE_UAAPAY;
 
     public function getApprovals()
     {
         return Approval::where('report_id', $this->effortReport->id)
-            ->where('type', Approval::TYPE_COENVPAY)
+            ->where('type', Approval::TYPE_UAAPAY)
             ->get();
     }
 }

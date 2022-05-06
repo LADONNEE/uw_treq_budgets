@@ -44,7 +44,7 @@
     <hr>
 
     <p>
-        Budget scope is defined in the application configuration. Email IT &lt;envithelp@uw.edu&gt;
+        Budget scope is defined in the application configuration. Email IT &lt;uaatreq@uw.edu&gt;
         for changes.
     </p>
 

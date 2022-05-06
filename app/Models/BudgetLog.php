@@ -99,7 +99,7 @@ class BudgetLog extends AbstractModel
                 $message = 'assigned ' . $this->getData('Name') . ' as fiscal contact for ' . $this->getData('budgetno');
                 break;
             case 'food-policy':
-                $message = 'set COENV food policy to "' . $this->getData('description') . '" for ' . $this->getData('budgetno');
+                $message = 'set UAA food policy to "' . $this->getData('description') . '" for ' . $this->getData('budgetno');
                 break;
             default:
                 $message = $this->eventtype;

@@ -53,7 +53,7 @@ class EffortReport extends Model
     const STAGE_FACULTY = 'FACULTY';
     const STAGE_APPROVAL = 'APPROVAL';
     const STAGE_SUPERSEDED = 'SUPERSEDED';
-    const STAGE_COENVPAY = 'COENV PAY';
+    const STAGE_UAAPAY = 'UAA PAY';
 
     const PERIOD_SUMMER = 'SUMMER';
     const PERIOD_ACADEMIC_YEAR = 'ACADEMIC YEAR';
