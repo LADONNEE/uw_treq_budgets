@@ -58,7 +58,7 @@ class ApprovalApiItem
         $this->sequence = $approval->sequence;
         $this->description = $approval->effortReport->description;
         $this->assigned_to = $approval->assigned_to_contact_id;
-        $this->assignee = $this->isUaapay ? 'UAA Pay' : "{$approval->assignee->firstname} {$approval->assignee->lastname}";
+        $this->assignee = $this->isUaapay ? 'UWORG Pay' : "{$approval->assignee->firstname} {$approval->assignee->lastname}";
         $this->response = $approval->response;
         $this->message = $approval->message;
         $this->isComplete = $approval->isComplete();

@@ -79,8 +79,8 @@ export default {
                 case 'FACULTY':
                     return 'Faculty';
                     break;
-                case 'UAA PAY':
-                    return 'UAA Pay';
+                case 'UWORG PAY':
+                    return 'UWORG Pay';
                     break;
                 default:
                     return 'Approval';

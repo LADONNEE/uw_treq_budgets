@@ -63,7 +63,7 @@ class UpdateApproval extends Controller
     private function expressApprove(EffortReport $effortReport, $data)
     {
         if (hasRole('budget:admin')) {
-            $approvals = $effortReport->approvals->whereNull('responded_at')->where('type', '<>', Approval::TYPE_UAAPAY);
+            $approvals = $effortReport->approvals->whereNull('responded_at')->where('type', '<>', Approval::TYPE_UWORGPAY);
             $errors = [];
 
             foreach ($approvals as $approval) {

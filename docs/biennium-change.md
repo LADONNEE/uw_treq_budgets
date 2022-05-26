@@ -7,8 +7,8 @@ In UW data Budget Numbers exist within bienniums. Within the UW Budget data you 
 find both of the following rows.
 
     Biennium   BudgetNbr    Name                     Status   OrgCode
-    2017       02-0820      UAA TECH IR OPERATIONS   1        2581001000
-    2019       02-0820      UAA TECH IR OPERATIONS   1        2581001000
+    2017       02-0820      UWORG TECH IR OPERATIONS   1        2581001000
+    2019       02-0820      UWORG TECH IR OPERATIONS   1        2581001000
 
 In this example the attributes of the Budget Number stayed consistent across
 bienniums, but that does not need to be the case. Attributes can change and Budgets
@@ -51,7 +51,7 @@ Biennium context specified. Here is a rough model of how these record relate.
 
 This project provides user managed setting for selecting the current biennium.
 
-* https://treq.uaa.uw.edu/budgets/settings
+* https://treq.uworg.uw.edu/budgets/settings
 
 This setting governs the default biennium for the home page, budget detail pages,
 and scope of the search tool. It also is used when selecting the biennium data to 

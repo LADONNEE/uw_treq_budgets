@@ -97,7 +97,7 @@ class ApprovalsFactory
         $approval = new Approval;
         $approval->assigned_to_contact_id = Contact::where('uwnetid', 'uaapay')->pluck('id')[0];
         $approval->name = 'uaatreq@uw.edu';
-        $approval->type = Approval::TYPE_UAAPAY;
+        $approval->type = Approval::TYPE_UWORGPAY;
 
         return $approval;
     }

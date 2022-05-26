@@ -43,7 +43,7 @@ class Approval extends Model
     const TYPE_DEFAULT_BUDGET = 'DEFAULT BUDGET';
     const TYPE_FACULTY = 'FACULTY';
     const TYPE_APPROVAL = 'APPROVAL';
-    const TYPE_UAAPAY = 'UAA PAY';
+    const TYPE_UWORGPAY = 'UWORG PAY';
 
     const RESPONSE_APPROVED = 'APPROVED';
     const RESPONSE_SENTBACK = 'SENT BACK';
@@ -102,7 +102,7 @@ class Approval extends Model
 
     public function isUaapay()
     {
-        return $this->type === self::TYPE_UAAPAY;
+        return $this->type === self::TYPE_UWORGPAY;
     }
 
     public function isReadyToApprove()
