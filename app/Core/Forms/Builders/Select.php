@@ -1,6 +1,6 @@
 <?php
 /**
- * @package edu.uw.uaa.pcore
+ * @package edu.uw.org.pcore
  */
 
 /**

@@ -1,7 +1,7 @@
 <?php
 namespace App\Forms\Validation;
 
-use Uwuaaws\Formkit\Validators\BaseValidator;
+use Uworgws\Formkit\Validators\BaseValidator;
 
 class TypeaheadHasId extends BaseValidator
 {

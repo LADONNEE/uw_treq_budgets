@@ -1,6 +1,6 @@
 <?php
 /**
- * @namespace edu.uw.uaa.college
+ * @namespace edu.uw.org.college
  */
 
 /**

@@ -1,6 +1,6 @@
 <?php
 /**
- * Render an HTML input based on a Uwuaaws\Formkit\Input object
+ * Render an HTML input based on a Uworgws\Formkit\Input object
  * Expects $input variable to contain either an Input object or string name of
  * an Input contained in the current Form object.
  */

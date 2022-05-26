@@ -1,7 +1,7 @@
 <?php
 namespace App\Forms\Validation;
 
-use Uwuaaws\Formkit\Input;
+use Uworgws\Formkit\Input;
 
 trait ValidatesUwNetIdsTrait
 {
