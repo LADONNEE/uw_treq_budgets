@@ -1,0 +1,21 @@
+{
+    "name": "uworgws/aclkit",
+    "description": "Tools for handling .",
+    "license": "MIT",
+    "keywords": ["formkit"],
+    "authors": [
+        {
+            "name": "Paul Hanisko",
+            "email": "hanisko@uw.edu"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Uworgws\\Aclkit\\": "src"
+        }
+    }
+}

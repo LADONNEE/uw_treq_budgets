@@ -1,0 +1,26 @@
+.form-group__label {
+  display: block;
+  font-size: .875rem;
+  color: #595959;
+  font-weight: 500;
+}
+
+.form-group.has-error {
+  position: relative;
+  left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  background-image: url('/courses/images/times.svg');
+  background-repeat: no-repeat;
+  background-position: left 2px;
+}
+
+.form-group__error {
+  padding: 0 13px;
+  color: #c00;
+}
+
+.form-group__help {
+  padding: 0 13px;
+  color: #595959;
+}

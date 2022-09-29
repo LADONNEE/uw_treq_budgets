@@ -1,6 +1,0 @@
-[submodule "packages/uworgws/aclkit"]
-	path = packages/uworgws/aclkit
-	url = git@gl2.ladonnee.com:customers/uwashington/uwischool/aclkit.git
-[submodule "packages/uworgws/formkit"]
-	path = packages/uworgws/formkit
-	url = git@gl2.ladonnee.com:customers/uwashington/uwischool/formkit.git
