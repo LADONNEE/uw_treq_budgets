@@ -5,7 +5,7 @@ if (!$route instanceof Illuminate\Routing\Router) {
     exit;
 }
 
-Route::group(array('prefix' => 'budgets'), function($route) {
+Route::group(array('prefix' => 'budgets'), function($route) { 
 
     $route->get('/', 'BudgetsController@index')->name('home');
 
