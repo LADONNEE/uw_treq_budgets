@@ -11,7 +11,7 @@
     </IfModule>
     RewriteEngine On
     # Don't rewrite Shibboleth.sso calls
-    RewriteRule ^saml - [L,NC]
+    RewriteRule ^Shibboleth\.sso - [L,NC]
 
     # File Exists
     RewriteCond %{REQUEST_FILENAME} -f
