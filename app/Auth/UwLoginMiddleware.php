@@ -21,9 +21,9 @@ class UwLoginMiddleware
     public function handle($request, Closure $next)
     {
         $user = $this->app['user'];
-        //if ($user instanceof UserAnonymous) {
-            //return redirect()->away('/Shibboleth.sso/Login?target=' . $request->fullUrl());
-        //}
+        if ($user instanceof UserAnonymous) {
+            return redirect()->away('/Shibboleth.sso/Login?target=' . $request->fullUrl());
+        }
         if (!hasRole('budget:user') && $request->path() != 'logout' && $request->path() != 'whoami') {
             abort(403, 'Not authorized');
         }
