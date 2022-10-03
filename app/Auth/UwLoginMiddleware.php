@@ -24,9 +24,9 @@ class UwLoginMiddleware
         //if ($user instanceof UserAnonymous) {
         //    return redirect()->away('/saml/login?target=' . $request->fullUrl());
         //}
-        if (!hasRole('budget:user') && $request->path() != 'logout' && $request->path() != 'whoami') {
-            abort(403, 'Not authorized');
-        }
+        //if (!hasRole('budget:user') && $request->path() != 'logout' && $request->path() != 'whoami') {
+        //    abort(403, 'Not authorized');
+        //}
         return $next($request);
     }
 }
