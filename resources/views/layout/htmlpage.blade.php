@@ -13,7 +13,7 @@
           crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/budgets/css/app.css{{ $cacheBusting = '?v=' . config('view.resource_cache') }}" media="all" />
     <link rel="stylesheet" type="text/css" href="/style/context_menu.css{{ $cacheBusting }}" media="all" />
-    <link rel="stylesheet" type="text/css" href="/public/css/env-warning.css{{ $cacheBusting }}" media="all" />
+    <link rel="stylesheet" type="text/css" href="/budgets/css/env-warning.css{{ $cacheBusting }}" media="all" />
     <script defer src="https://kit.fontawesome.com/96343af987.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
@@ -91,8 +91,8 @@
 
 @yield('state')
 <script type="text/javascript" src="/budgets/js/app.js{{ $cacheBusting }}"></script>
-<script type="text/javascript" src="/js/context_menu_jquery.js{{ $cacheBusting }}"></script>
-<script type="text/javascript" src="/uworg-util/js/env-warning.js{{ $cacheBusting }}"></script>
+<script type="text/javascript" src="/budgets/js/context_menu_jquery.js{{ $cacheBusting }}"></script>
+<script type="text/javascript" src="/budgets/js/env-warning.js{{ $cacheBusting }}"></script>
 @yield('scripts')
 </body>
 </html>
