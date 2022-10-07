@@ -5,7 +5,7 @@ if (!$route instanceof Illuminate\Routing\Router) {
     exit;
 }
 
-//Route::group(array('prefix' => 'budgets'), function($route) { 
+Route::group(array('prefix' => 'budgets'), function($route) { 
 
     $route->get('/', 'BudgetsController@index')->name('home');
 
@@ -101,4 +101,4 @@ if (!$route instanceof Illuminate\Routing\Router) {
     // Must be last
     $route->get('{budget}', 'BudgetsController@show')->name('budget-details');
 
-//});
+});
