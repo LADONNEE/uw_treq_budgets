@@ -1,6 +1,6 @@
 ## Budgets
 
-Track faculty effort, funding, and allocation of pay to University of Washington, Undergraduate Academic Affairs budgets.
+Track faculty effort, funding, and allocation of pay to University of Washington, Information School budgets.
 
 ### Docs
 

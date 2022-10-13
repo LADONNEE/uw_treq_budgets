@@ -6,10 +6,10 @@
 return [
     'scope' => [
         'college-codes' => [
-            '282' => 'UNDERGRADUATE ACADEMIC AFFAIRS',
+            '265' => 'INFORMATION',
         ],
         'org-codes' => [
-            '2820001000' => 'UWORG ADMINISTRATION',
+            '2650001000' => 'UWORG ADMINISTRATION',
 /*            '2552258000' => 'AP CR CERT-EDUCATION',
             '2552558000' => 'AP NC STAL-EDUCATION',
             '2800258010' => 'SQ-EDUCATION',

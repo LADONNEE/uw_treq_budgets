@@ -71,7 +71,7 @@
             <a href="http://www.washington.edu/online/terms">Terms</a>
         </div>
         <div class="copyright">
-            <a href="https://uw.edu/uworg">&#169;{{ date('Y') }} UW Undergraduate Academic Affairs</a>,
+            <a href="https://uw.edu/uworg">&#169;{{ date('Y') }} UW Information School</a>,
             <a href="http://www.seattle.gov/">Seattle, Washington</a>
         </div>
     </div>
