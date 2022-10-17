@@ -233,4 +233,6 @@ return [
 
     ],
 
+    'database_shared' => env('DB_DATABASE_SHARED')
+
 ];

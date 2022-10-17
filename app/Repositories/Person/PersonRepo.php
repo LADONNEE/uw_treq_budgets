@@ -12,6 +12,7 @@ use App\Models\MergeHistory;
 use App\Models\Person;
 use App\Models\Role;
 use App\Repositories as Repo;
+use Config;
 
 class PersonRepo
 {
@@ -26,6 +27,13 @@ class PersonRepo
     protected $soarsToId = [];
     protected $uwnetidToId = [];
     protected $resolvedCache = [];
+
+    protected $table_shared;
+
+    public function __construct()
+    {
+        $this->table_shared = Config::get('app.database_shared') ; 
+    }
 
     /**
      * List of person that have a system authorization (record on roles table)
@@ -44,10 +52,10 @@ class PersonRepo
             }
             $roles[$role->uwnetid][] = $role->role;
         }
-        $query = Person::select(\DB::raw('DISTINCT shared.uw_persons.*'))
-            ->join('roles', 'shared.uw_persons.uwnetid', '=', 'roles.uwnetid')
-            ->orderBy('shared.uw_persons.lastname')
-            ->orderBy('shared.uw_persons.firstname');
+        $query = Person::select(\DB::raw('DISTINCT ' . $this->table_shared . '.uw_persons.*'))
+            ->join('roles', $this->table_shared . '.uw_persons.uwnetid', '=', 'roles.uwnetid')
+            ->orderBy($this->table_shared . '.uw_persons.lastname')
+            ->orderBy($this->table_shared . '.uw_persons.firstname');
         if ($context) {
             $query->where('roles.role', 'like', $context . '%');
             $query->orWhere('roles.role', '=', 'super');
@@ -228,9 +236,9 @@ class PersonRepo
 
     public function withRole($role)
     {
-        return Person::select('shared.uw_persons.*')
+        return Person::select($this->table_shared . '.uw_persons.*')
             ->join('roles', function($join) {
-                $join->on('shared.uw_persons.uwnetid', '=', 'roles.uwnetid');
+                $join->on($this->table_shared . '.uw_persons.uwnetid', '=', 'roles.uwnetid');
             })
             ->where('roles.role', $role)
             ->orderBy('lastname')
@@ -240,9 +248,9 @@ class PersonRepo
 
     public function withNoAppointment($paginate = 40)
     {
-        return Person::select('shared.uw_persons.*')
+        return Person::select($this->table_shared . '.uw_persons.*')
             ->leftJoin('edw_appointment_cache', function($join) {
-                $join->on('shared.uw_persons.person_id', '=', 'edw_appointment_cache.person_id');
+                $join->on($this->table_shared . '.uw_persons.person_id', '=', 'edw_appointment_cache.person_id');
             })
             ->whereNull('edw_appointment_cache.id')
             ->where('uwperson', 1)

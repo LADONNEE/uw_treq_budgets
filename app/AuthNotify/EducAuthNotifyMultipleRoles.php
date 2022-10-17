@@ -3,6 +3,7 @@
 namespace App\AuthNotify;
 
 use Illuminate\Support\Facades\DB;
+use Config;
 
 /**
  * Decorator that provides multiple users roles as a single standardized string.
@@ -22,11 +23,17 @@ class CollegeAuthNotifyMultipleRoles extends CollegeAuthNotify
      *
      * @var string
      */
-    const TABLE_ROLE_SUMMARY = 'shared.users_budgets';
+    //const TABLE_ROLE_SUMMARY = 'shared.users_budgets';
+    private $table_role_summary;
+
+    public function __construct() {
+            $this->table_role_summary = Config::get('app.database_shared') . '.users_budgets'; 
+    } 
+
 
     public function notify($uwnetid, $role, $actor_uwnetid, $person_data = [])
     {
-        $roleSummary = DB::table(self::TABLE_ROLE_SUMMARY)
+        $roleSummary = DB::table(self::constant($this->table_role_summary))
             ->where('uwnetid', $uwnetid)
             ->value('role');
 

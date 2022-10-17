@@ -7,16 +7,25 @@ use App\Models\Allocation;
 use App\Models\Contact;
 use App\Utilities\DefaultFiscalPerson;
 use Carbon\Carbon;
+use Config;
 
 class AllocationsApiController
 {
+
+    protected $table_uw_persons;
+
+    public function __construct()
+    {
+        $this->table_uw_persons = Config::get('app.database_shared') . '.uw_persons'; 
+    }
+
     public function index(Contact $faculty)
     {
         $allocations = Allocation::where('faculty_contact_id', $faculty->id)
             ->where('end_at', '>', Carbon::now()->subMonth())
             ->leftJoin('budgets', 'allocations.budget_id', 'budgets.id')
-            ->leftJoin('shared.uw_persons', 'budgets.fiscal_person_id', 'shared.uw_persons.person_id')
-            ->select('allocations.*', 'shared.uw_persons.firstname as budget_fiscal_firstname', 'shared.uw_persons.lastname as budget_fiscal_lastname')
+            ->leftJoin($this->table_uw_persons, 'budgets.fiscal_person_id', $this->table_uw_persons . '.person_id')
+            ->select('allocations.*', $this->table_uw_persons . '.firstname as budget_fiscal_firstname', $this->table_uw_persons . '.lastname as budget_fiscal_lastname')
             ->orderBy('type', 'DESC')
             ->orderBy('start_at')
             ->orderBy('end_at')

@@ -8,14 +8,17 @@ use App\Models\Budget;
 use App\Models\BudgetLog;
 use App\Utilities\FirstWords;
 use Illuminate\Support\Facades\DB;
+use Config;
 
 class BudgetForm extends Form
 {
     protected $budget;
+    protected $table_uw_persons;
 
     public function __construct(Budget $budget)
     {
         $this->budget = $budget;
+        $this->table_uw_persons = Config::get('app.database_shared') . '.uw_persons'; 
     }
 
     public function createInputs()
@@ -81,7 +84,7 @@ class BudgetForm extends Form
     public function optionsReconciler()
     {
         $out = ['' => '(no reconciler)'];
-        $fiscals = DB::table('shared.uw_persons AS p')
+        $fiscals = DB::table($this->table_uw_persons . ' AS p')
             ->join('reconcilers_view', 'reconcilers_view.person_id', '=', 'p.person_id')
             ->select('reconcilers_view.person_id', 'p.firstname', 'p.lastname')
             ->orderBy('p.firstname')

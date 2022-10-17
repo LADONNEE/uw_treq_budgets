@@ -6,14 +6,17 @@ use App\Forms\Form;
 use App\Models\Budget;
 use App\Models\BudgetLog;
 use Illuminate\Support\Facades\DB;
+use Config;
 
 class ManagerForm extends Form
 {
     protected $budget;
+    protected $table_uw_persons;
 
     public function __construct(Budget $contact)
     {
         $this->budget = $contact;
+        $this->table_uw_persons = Config::get('app.database_shared') . '.uw_persons'; 
     }
 
     public function createInputs()
@@ -46,7 +49,7 @@ class ManagerForm extends Form
     public static function optionsManagers()
     {
         $out = ['' => '(no budget manager)'];
-        $fiscals = DB::table('shared.uw_persons AS p')
+        $fiscals = DB::table($this->table_uw_persons . ' AS p')
             ->join('managers_view', 'managers_view.person_id', '=', 'p.person_id')
             ->select('managers_view.person_id', 'p.firstname', 'p.lastname')
             ->orderBy('p.firstname')

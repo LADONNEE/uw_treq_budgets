@@ -5,6 +5,7 @@ namespace App\Reports;
 use App\Models\Contact;
 use App\Models\Person;
 use Illuminate\Support\Facades\DB;
+use Config;
 
 class PersonSearch
 {
@@ -15,15 +16,17 @@ class PersonSearch
         'employeeid'
     ];
     protected $filters;
+    protected $table_uw_persons;
 
     public function __construct(array $filters)
     {
         $this->filters = $filters;
+        $this->table_uw_persons = Config::get('app.database_shared') . '.uw_persons' ; 
     }
 
     public function getReport()
     {
-        $query = Person::from('shared.uw_persons AS p')
+        $query = Person::from($this->table_uw_persons . '.uw_persons AS p')
             ->orderBy('p.lastname')
             ->orderBy('p.firstname')
             ->take(5);

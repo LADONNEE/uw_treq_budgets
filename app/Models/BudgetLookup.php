@@ -1,6 +1,8 @@
 <?php
 namespace App\Models;
 
+use Config;
+
 /**
  * @property integer   $budget_id
  * @property string    $biennium
@@ -13,7 +15,11 @@ namespace App\Models;
  */
 class BudgetLookup extends ReadOnlyModel
 {
-    protected $table = 'shared.budgets';
+    protected $table;
     protected $primaryKey = 'budget_id';
+
+    public function __construct() {
+        $this->table = Config::get('app.database_shared'); 
+} 
 
 }

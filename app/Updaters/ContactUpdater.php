@@ -38,7 +38,9 @@ class ContactUpdater
      */
     private static function linkUwPerson()
     {
-        $sql = sqlInclude(__DIR__ . '/Queries/sql/uw_person_link.sql');
+        $sql = sqlInclude(__DIR__ . '/Queries/sql/uw_person_link.sql',
+                    ['__DBSHARED__' => env('DB_DATABASE_SHARED', 'shared')],
+                );
         DB::statement($sql);
     }
 }
