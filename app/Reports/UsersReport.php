@@ -10,7 +10,7 @@ class UsersReport
 
     protected $table_shared;
 
-    public function __construct(array $filters)
+    public function __construct()
     {
         $this->table_shared = Config::get('app.database_shared') ; 
     }
