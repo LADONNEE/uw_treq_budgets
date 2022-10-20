@@ -49,7 +49,7 @@ class ManagerForm extends Form
     public static function optionsManagers()
     {
         $out = ['' => '(no budget manager)'];
-        $fiscals = DB::table($this->table_uw_persons . ' AS p')
+        $fiscals = DB::table(Config::get('app.database_shared') . '.uw_persons AS p')
             ->join('managers_view', 'managers_view.person_id', '=', 'p.person_id')
             ->select('managers_view.person_id', 'p.firstname', 'p.lastname')
             ->orderBy('p.firstname')
