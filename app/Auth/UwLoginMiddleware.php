@@ -26,7 +26,7 @@ class UwLoginMiddleware
             // return redirect()->away('/budgets/saml/login/' . urlencode($request->fullUrl()));
             //return redirect()->away('https://ischool.uw.edu/Shibboleth.sso/Login?target=' . $request->fullUrl());
         }
-        if (!hasRole('budget:user') && $request->path() != 'logout' && $request->path() != 'whoami') {
+        if (!hasRole('budget:user') && $request->path() != 'budgets/logout' && $request->path() != 'budgets/whoami') {
             abort(403, 'Not authorized');
         }
         return $next($request);
