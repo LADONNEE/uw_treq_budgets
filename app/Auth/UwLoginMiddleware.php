@@ -22,7 +22,7 @@ class UwLoginMiddleware
     {
         $user = $this->app['user'];
         if ($user instanceof UserAnonymous) {
-            return redirect()->away('/budgets/saml/login/' . urlencode($request->path()));
+            return redirect()->to('/budgets/saml/login/' . $request->path());
             // return redirect()->away('/budgets/saml/login/' . urlencode($request->fullUrl()));
             //return redirect()->away('https://ischool.uw.edu/Shibboleth.sso/Login?target=' . $request->fullUrl());
         }
