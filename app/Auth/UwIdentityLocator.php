@@ -53,7 +53,7 @@ class UwIdentityLocator
      */
     public function getUwIdentity()
     {
-        if (empty($_SERVER['REMOTE_USER'])) {
+        if (empty($_SERVER['REMOTE_USER']) || $_SERVER['REMOTE_USER'] == 'None') {
             return false;
         }
         $identity = $_SERVER['REMOTE_USER'];
