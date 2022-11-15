@@ -6,16 +6,13 @@
 return [
     'scope' => [
         'college-codes' => [
-            '265' => 'INFORMATION',
+            '267' => 'INFORMATION SCHOOL',
         ],
         'org-codes' => [
-            '2650001000' => 'UWORG ADMINISTRATION',
-/*            '2552258000' => 'AP CR CERT-EDUCATION',
-            '2552558000' => 'AP NC STAL-EDUCATION',
-            '2800258010' => 'SQ-EDUCATION',
-*/        ],
+            'not specified' => 'already covered by College Code',
+        ],
         'budgets' => [
-            '061303' => 'UWORG ADMINISTRATION',
+            'not specified' => 'already covered by College Code',
         ],
     ]
 ];
