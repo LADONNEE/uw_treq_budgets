@@ -12,7 +12,7 @@ return [
             '2670000000' => 'already covered by College Code',
         ],
         'budgets' => [
-            '061303' => 'already covered by College Code',
+            '000000' => 'already covered by College Code',
         ],
     ]
 ];
