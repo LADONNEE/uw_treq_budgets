@@ -9,10 +9,10 @@ return [
             '267' => 'INFORMATION SCHOOL',
         ],
         'org-codes' => [
-            'not specified' => 'already covered by College Code',
+            '0' => 'already covered by College Code',
         ],
         'budgets' => [
-            'not specified' => 'already covered by College Code',
+            '0' => 'already covered by College Code',
         ],
     ]
 ];
