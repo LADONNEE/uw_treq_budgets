@@ -9,10 +9,10 @@ return [
             '267' => 'INFORMATION SCHOOL',
         ],
         'org-codes' => [
-            '0' => 'already covered by College Code',
+            '2670000000' => 'already covered by College Code',
         ],
         'budgets' => [
-            '0' => 'already covered by College Code',
+            '061303' => 'already covered by College Code',
         ],
     ]
 ];
