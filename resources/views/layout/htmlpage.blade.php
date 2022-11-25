@@ -33,15 +33,9 @@
             </button>
         </div>
         <div class="nav-uw__other-menu">
-            <button id="system_menu_trigger" class="nav-uw__btn" tabindex="0" data-uwnetid="1">
-                <svg id="w-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 450 303" >
-                    <defs>
-                        <path d="M0 54.82L35.14 54.82L97.49 303L183.96 303L224.15 148.62L263.47 303L350.14 303L415.05 54.82L450 54.82L450 0L330.13 0.56L330.13 54.82L367.66 54.82L325.75 209.89L272.99 0L216.25 0L159.48 211.58L121.39 54.82L161.01 54.82L161.01 0L0 0L0 54.82Z"
-                              id="b9EtwxU1w"></path>
-                    </defs>
-                    <use xlink:href="#b9EtwxU1w" opacity="1" fill="inherit" fill-opacity="inherit" stroke="#000000" stroke-width="0" stroke-opacity="1"></use>
-                </svg>
-            </button>
+            
+            <img src="/treq/images/iSchoolPrimary_RGB_White.svg" height="38px" style="margin-top:4px;margin-right:24px" />
+
         </div>
     </nav>
     <div id="search-bar" class="layout__search" {!! (isset($searchOpen)) ? '' : 'style="display:none;"' !!}>
