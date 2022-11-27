@@ -7,13 +7,13 @@
             @confirmed="(data) => saveTask(data)"
         ></component>
         <div v-else>
-            <button v-if="canComplete && !isUaapay" class="btn btn-primary ml-2" @click.prevent="mode = 'approve'" :disabled="!canApprove">
+            <button v-if="canComplete && !isUworgpay" class="btn btn-primary ml-2" @click.prevent="mode = 'approve'" :disabled="!canApprove">
                 <i class="fas fa-thumbs-up"></i> Approve
             </button>
-            <button v-if="canCompleteWorkday && isUaapay" class="btn btn-primary ml-2" @click.prevent="mode = 'workday'" :disabled="!canApprove">
+            <button v-if="canCompleteWorkday && isUworgpay" class="btn btn-primary ml-2" @click.prevent="mode = 'workday'" :disabled="!canApprove">
                 <i class="fas fa-badge-check"></i> Entered in Workday
             </button>
-            <button v-if="canComplete || (canCompleteWorkday && isUaapay)" class="btn btn-light ml-2" @click.prevent="mode = 'send-back'" :disabled="!canApprove">
+            <button v-if="canComplete || (canCompleteWorkday && isUworgpay)" class="btn btn-light ml-2" @click.prevent="mode = 'send-back'" :disabled="!canApprove">
                 <i class="fas fa-undo"></i> Send Back
             </button>
             <i v-tooltip="" class="fal fa-trash task__trash-icon pt-2" v-if="userIsCreator" @click.prevent="mode = 'revision'"></i>
@@ -42,7 +42,7 @@ export default {
             }
         }
     },
-    props: ['id', 'canApprove', 'canComplete', 'canCompleteWorkday', 'canDelete', 'canReassign', 'save', 'isApproval', 'isUaapay', 'userIsCreator'],
+    props: ['id', 'canApprove', 'canComplete', 'canCompleteWorkday', 'canDelete', 'canReassign', 'save', 'isApproval', 'isUworgpay', 'userIsCreator'],
     data() {
         return {
             mode: null
@@ -50,7 +50,7 @@ export default {
     },
     computed: {
         active() {
-            return this.canComplete || (this.canCompleteWorkday && this.isUaapay) || this.canDelete;
+            return this.canComplete || (this.canCompleteWorkday && this.isUworgpay) || this.canDelete;
         },
         actionComponent() {
             switch (this.mode) {

@@ -95,8 +95,8 @@ class ApprovalsFactory
     private static function getCoePayApproval()
     {
         $approval = new Approval;
-        $approval->assigned_to_contact_id = Contact::where('uwnetid', 'uaapay')->pluck('id')[0];
-        $approval->name = 'uaatreq@uw.edu';
+        $approval->assigned_to_contact_id = Contact::where('uwnetid', 'uworgpay')->pluck('id')[0];
+        $approval->name = 'uworgtreq@uw.edu';
         $approval->type = Approval::TYPE_UWORGPAY;
 
         return $approval;

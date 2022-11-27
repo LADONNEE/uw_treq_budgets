@@ -100,7 +100,7 @@ class Approval extends Model
         return $this->response === self::RESPONSE_SENTBACK;
     }
 
-    public function isUaapay()
+    public function isUworgpay()
     {
         return $this->type === self::TYPE_UWORGPAY;
     }

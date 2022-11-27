@@ -25,7 +25,7 @@ class ApprovalApiItem
     public $icon;
     public $id;
     public $isApproved;
-    public $isUaapay;
+    public $isUworgpay;
     public $isComplete;
     public $isReportComplete;
     public $isSentBack;
@@ -53,12 +53,12 @@ class ApprovalApiItem
         $this->id = $approval->id;
         $this->creator = "{$approval->effortReport->creator->firstname} {$approval->effortReport->creator->lastname}";
         $this->createdAt = eDate($approval->effortReport->created_at);
-        $this->isUaapay = $approval->isCoePay();
+        $this->isUworgpay = $approval->isCoePay();
         $this->type = $approval->type;
         $this->sequence = $approval->sequence;
         $this->description = $approval->effortReport->description;
         $this->assigned_to = $approval->assigned_to_contact_id;
-        $this->assignee = $this->isUaapay ? 'UWORG Pay' : "{$approval->assignee->firstname} {$approval->assignee->lastname}";
+        $this->assignee = $this->isUworgpay ? 'UWORG Pay' : "{$approval->assignee->firstname} {$approval->assignee->lastname}";
         $this->response = $approval->response;
         $this->message = $approval->message;
         $this->isComplete = $approval->isComplete();
@@ -140,7 +140,7 @@ class ApprovalApiItem
             return "{$this->creator} marked this as approval not needed from {$this->assignee}";
         }
 
-        if ($this->isApproved && $this->isUaapay) {
+        if ($this->isApproved && $this->isUworgpay) {
             return "Entered in Workday";
         }
 
