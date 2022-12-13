@@ -59,7 +59,7 @@
     </div> <!-- /.layout__wrapper -->
     <div class="layout__footer footer">
         <div>
-            <a href="mailto:uworgtreq@uw.edu?subject=UWORG%20Website%20Question">@icon('envelope') Contact</a> &bull;
+            <a href="mailto:itreq@uw.edu?subject=UWORG%20Website%20Question">@icon('envelope') Contact</a> &bull;
             <a href="https://uw.edu/uworg">Help</a> &bull;
             <a href="http://www.washington.edu/online/privacy">Privacy</a> &bull;
             <a href="http://www.washington.edu/online/terms">Terms</a>
