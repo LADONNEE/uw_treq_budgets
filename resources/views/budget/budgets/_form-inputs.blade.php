@@ -20,3 +20,4 @@
 'label' => 'Food Note',
 'rows' => 3,
 ])
+@inputBlock('visible', 'Visible in TREQ Budget suggestions')

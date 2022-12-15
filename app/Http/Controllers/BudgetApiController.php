@@ -11,6 +11,7 @@ class BudgetApiController extends Controller
             ->where('biennium', setting('current-biennium'))
             ->where('BudgetStatus', '<>', '3')
             ->where('BudgetStatus', '<>', '4')
+            ->where('visible', true)
             ->orderBy('budgetno')
             ->orderBy('name')
             ->get();

@@ -26,6 +26,7 @@ use Carbon\Carbon;
 * @property Note $purpose
 * @property Person $reconciler
 * @property UwBudget $uw
+* @property boolean $visible
 */
 class Budget extends AbstractModel
 {
@@ -40,6 +41,7 @@ class Budget extends AbstractModel
         'non_coe_name',
         'purpose_brief',
         'food',
+        'visible',
     ];
     protected $dates = [
         'EffectiveDate',

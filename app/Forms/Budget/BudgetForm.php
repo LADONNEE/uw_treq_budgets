@@ -40,6 +40,8 @@ class BudgetForm extends Form
             ->firstOption('(missing)');
         $this->add('food_note', 'textarea')
             ->help('Additional food instructions per contract, policy, etc.');
+        $this->add('visible', 'boolean')
+            ->help('Choose if Budget should show up in TREQ suggestions');
     }
 
     public function initValues()
@@ -70,6 +72,7 @@ class BudgetForm extends Form
         $this->budget->business_person_id = $this->get('business_person_id');
         $this->budget->purpose_brief = $this->makePurposeBrief($this->get('purpose_brief'), $this->get('purpose'));
         $this->budget->food = $this->get('food');
+        $this->budget->visible = $this->get('visible');
         $this->budget->save();
 
         if ($managerChanged) {

@@ -92,6 +92,18 @@
                         @include('budget/budgets/_people-forms')
                     @endif
                 </div>
+
+
+                <div class="mb-3">
+                    <div class="top-label-gray">Visible in TREQ Suggestions</div>
+                    @if($budget->visible)
+                        <div class="p-2 text-med pre-line">Yes</div>
+                    @else
+                        <div class="p-2 text-med pre-line">No</div>
+                    @endif
+                </div>
+
+
             </div>
 
             @include('budget.effort.allocations-by-budget._allocations-by-budget')
