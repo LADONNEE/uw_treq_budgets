@@ -15,7 +15,7 @@
 
                 <div class="flex-columns mb-2">
                     <div>
-                        <div class="top-label-gray">Administrative PI/Director</div>
+                        <div class="top-label-gray">Spend Authorizer</div>
                         <div class="p-2 text-lg">
                             @if($budget->business)
                                 {{ eFirstLast($budget->business) }}

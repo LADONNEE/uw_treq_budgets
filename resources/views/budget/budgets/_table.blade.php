@@ -13,7 +13,7 @@
             <th>Biennium</th>
             <th>Name</th>
             <th>Status</th>
-            <th>Administrative PI/Director</th>
+            <th>Spend Authorizer</th>
             <th>Purpose</th>
             <th>Budget Manager</th>
         </tr>

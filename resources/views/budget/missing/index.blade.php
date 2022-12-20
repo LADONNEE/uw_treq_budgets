@@ -5,7 +5,7 @@
     <h1 class="mt-3">Missing Records</h1>
 
     <p>
-        These budgets are missing one or more required fields: Administrative PI / Director, Budget Manager,
+        These budgets are missing one or more required fields: Spend Authorizer, Budget Manager,
         Reconciler, Purpose, or Food Policy.
     </p>
 
@@ -22,7 +22,7 @@
             <tr>
                 <th>Number</th>
                 <th>Name</th>
-                <th>Administrative PI/Director</th>
+                <th>Spend Authorizer</th>
                 <th>Budget Manager</th>
                 <th>Reconciler</th>
                 <th>Purpose</th>

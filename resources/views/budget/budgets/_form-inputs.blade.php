@@ -1,7 +1,7 @@
 <div id="js-person">
     @input('business_person_id', ['id' => 'js-person-id'])
     @inputBlock('person_search', [
-    'label' => 'Administrative PI/Director',
+    'label' => 'Spend Authorizer',
     'class' => 'person-typeahead',
     'data-for' => 'js-person-id'
     ])
