@@ -26,6 +26,10 @@ Route::group(array('prefix' => 'budgets'), function($route) {
     $route->get('{budget}/missing', 'MissingController@edit');
     $route->post('{budget}/missing', 'MissingController@update');
 
+    $route->get('projectcode', 'ProjectCodeController@index');
+    $route->get('{projectcode}/projectcode', 'ProjectCodeController@edit');
+    $route->post('{projectcode}/projectcode', 'ProjectCodeController@update');
+
     $route->get('{budget}/notes', 'NotesController@index');
     $route->get('{budget}/note', 'NotesController@create');
     $route->post('{budget}/note', 'NotesController@store');

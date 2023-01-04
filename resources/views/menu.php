@@ -4,6 +4,7 @@ return [
     'Budgets' => [
         ['Budgets', action('BudgetsController@index')],
         ['Missing Records', action('MissingController@index'), 'budget:fiscal'],
+        ['Project Codes', action('ProjectCodeController@index'), 'budget:fiscal'],
         ['About Budgets', action('AboutController@index')],
     ],
     'Admin' => [
