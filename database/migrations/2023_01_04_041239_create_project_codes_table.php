@@ -16,7 +16,7 @@ class CreateProjectCodesTable extends Migration
         Schema::create('project_codes', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->string('code', 6)->nullable();
+            $table->string('code', 10)->nullable();
             $table->string('description');
             $table->string('allocation_type_frequency');
             $table->string('purpose');
