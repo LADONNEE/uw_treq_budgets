@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-Class WorktagsBudgetsFdmTranslatorTable extends Migration
+Class CreateWorktagsBudgetsFdmTranslatorTable extends Migration
 {
     public function up()
     {
