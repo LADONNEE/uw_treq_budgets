@@ -38,7 +38,8 @@ class WorktagsController extends Controller
             return [];
         }
 
-        $sql = <<<_SQL
+        // this way of writing is only compatible with mysql8
+        /*$sql = <<<_SQL
         with recursive wh as (
           select     worktag_hierarchy.*
           from       worktag_hierarchy
@@ -50,7 +51,21 @@ class WorktagsController extends Controller
                   on p.id = wh.parent_id
         )
         select * from wh;
+        _SQL;*/
+
+        //had to rewrite to make it compatible with mysql5.7
+        $sql = <<<_SQL
+        select  wh.*
+        from    (select * from worktag_hierarchy
+                order by parent_id, id) wh,
+                (select @pv := ?) v
+        where   find_in_set(parent_id, @pv)
+        and     length(@pv := concat(@pv, ',', id));
         _SQL;
+
+        
+
+
 
         $results = DB::select($sql, [$hierarchy_id]);
         $out = [];
