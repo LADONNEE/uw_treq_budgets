@@ -1,5 +1,5 @@
 UPDATE contacts c
-JOIN __DBSHARED__.uw_persons p
+JOIN shared.uw_persons p
 ON c.employeeid = p.employeeid OR c.uwnetid = p.uwnetid
 SET c.person_id = p.person_id,
     c.uwnetid = p.uwnetid,

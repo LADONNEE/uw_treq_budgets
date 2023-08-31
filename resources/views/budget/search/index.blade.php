@@ -12,7 +12,7 @@
     </form>
 
 
-    @include('budget/budgets/_table', [
+    @include('budgets/_table', [
         'budgets' => $report->budgets(),
         'empty' => 'No matches for this search.',
     ])

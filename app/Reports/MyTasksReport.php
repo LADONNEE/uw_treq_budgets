@@ -14,13 +14,13 @@ class MyTasksReport extends MyEffortReportsReport
 
         // Tasks for anyone with the Workday role
         if (user()->hasRole('workday')){
-            $uworgpayContactId = Contact::where('uwnetid', 'uworgpay')->pluck('id');
-            $uworgpayApprovals = Approval::where('response', Approval::RESPONSE_PENDING)
-                ->where('assigned_to_contact_id', $uworgpayContactId)
+            $coenvpayContactId = Contact::where('uwnetid', 'coenvpay')->pluck('id');
+            $coenvpayApprovals = Approval::where('response', Approval::RESPONSE_PENDING)
+                ->where('assigned_to_contact_id', $coenvpayContactId)
                 ->orderBy('created_at', 'DESC')
                 ->get();
 
-            foreach ($uworgpayApprovals as $approval) {
+            foreach ($coenvpayApprovals as $approval) {
                 if (!$approval->effortReport->isComplete() && $approval->type === $approval->effortReport->stage) {
                     $effortReports[] = $approval->effortReport;
                 }

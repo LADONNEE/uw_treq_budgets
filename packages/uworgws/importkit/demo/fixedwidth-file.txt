@@ -1,0 +1,5 @@
+7    Wilma   carton
+19   Fred    bag
+17   Betty   envelope
+12   Barney  crate
+45   Bam Bam pot

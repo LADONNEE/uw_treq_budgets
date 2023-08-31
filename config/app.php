@@ -56,6 +56,8 @@ return [
 
     'asset_url' => env('ASSET_URL', null),
 
+    'app_uri_prefix' => env('APP_URI_PREFIX', 'budgets'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -233,6 +235,9 @@ return [
 
     ],
 
-    'database_shared' => env('DB_DATABASE_SHARED')
+    'database_shared' => env('DB_DATABASE_SHARED'),
+
+    'uworg_hierarchy' => env('UWORG_HIERARCHY_LIKE'),
+    'uworg_top_costcenter_hierarchy' => env('UWORG_TOP_CCH_WID')
 
 ];

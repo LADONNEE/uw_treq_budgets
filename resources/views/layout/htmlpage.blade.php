@@ -5,7 +5,7 @@
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title') - {{ config('app.name') }} - UWORG - UW</title>
+    <title>@yield('title') - {{ config('app.name') }} - UW iSchool - UW</title>
     <link rel="icon" type="image/x-icon" href="/budgets/images/favicon.ico"/>
     @yield('style')
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"

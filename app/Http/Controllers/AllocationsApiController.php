@@ -7,7 +7,7 @@ use App\Models\Allocation;
 use App\Models\Contact;
 use App\Utilities\DefaultFiscalPerson;
 use Carbon\Carbon;
-use Config;
+
 
 class AllocationsApiController
 {
@@ -16,7 +16,7 @@ class AllocationsApiController
 
     public function __construct()
     {
-        $this->table_uw_persons = Config::get('app.database_shared') . '.uw_persons'; 
+        $this->table_uw_persons = config('app.database_shared') . '.uw_persons'; 
     }
 
     public function index(Contact $faculty)

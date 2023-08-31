@@ -3,22 +3,13 @@ namespace App\Reports;
 
 use App\Auth\User;
 use Illuminate\Support\Facades\DB;
-use Config;
 
 class UsersReport
 {
-
-    protected $table_shared;
-
-    public function __construct()
-    {
-        $this->table_shared = Config::get('app.database_shared') ; 
-    }
-
     public function getReport()
     {
         $results = DB::table('roles AS r')
-            ->join($this->table_shared . '.uw_persons AS p', 'r.uwnetid', '=', 'p.uwnetid')
+            ->join('shared.uw_persons AS p', 'r.uwnetid', '=', 'p.uwnetid')
             ->select([
                 'r.uwnetid',
                 'r.role',

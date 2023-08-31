@@ -1,6 +1,6 @@
 <?php
 /**
- * @package edu.uw.org.college
+ * @package edu.uw.environment.college
  */
 
 /**
@@ -101,6 +101,20 @@ class EdwParser
             return null;
         }
         return $value;
+    }
+
+    /**
+     * Convert multi-byte characters from ISO-8859-1 to UTF-8
+     * @param $value
+     * @return null|string
+     */
+    public function stringFromEdwEncoding($value)
+    {
+        $value = trim($value);
+        if (empty($value)) {
+            return null;
+        }
+        return iconv("ISO-8859-1", "UTF-8//TRANSLIT", (string) $value);
     }
 
     /**

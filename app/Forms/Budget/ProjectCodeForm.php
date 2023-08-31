@@ -7,7 +7,7 @@ use App\Forms\Validation\PersonExists;
 use App\Models\ProjectCode;
 use App\Utilities\FirstWords;
 use Illuminate\Support\Facades\DB;
-use Config;
+
 
 class ProjectCodeForm extends Form
 {
@@ -17,7 +17,7 @@ class ProjectCodeForm extends Form
     public function __construct(ProjectCode $projectcode)
     {
         $this->projectcode = $projectcode;
-        $this->table_uw_persons = Config::get('app.database_shared') . '.uw_persons'; 
+        $this->table_uw_persons = config('app.database_shared') . '.uw_persons'; 
     }
 
     public function createInputs()

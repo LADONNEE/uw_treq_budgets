@@ -26,7 +26,7 @@ use Carbon\Carbon;
 * @property Note $purpose
 * @property Person $reconciler
 * @property UwBudget $uw
-* @property boolean $visible
+ * @property Worktag[] $worktags
 */
 class Budget extends AbstractModel
 {
@@ -41,7 +41,6 @@ class Budget extends AbstractModel
         'non_coe_name',
         'purpose_brief',
         'food',
-        'visible',
     ];
     protected $dates = [
         'EffectiveDate',
@@ -132,4 +131,34 @@ class Budget extends AbstractModel
         return $this->belongsTo(UwBudget::class, 'budgetno', 'budgetno')
             ->where('uw_budgets_cache.BienniumYear', setting('current-biennium'));
     }
+
+
+    public function worktags()
+    {
+        return $this->belongsToMany(Worktag::class, 'worktags_budgets', 'budget_id', 'worktag_id')
+            ->orderBy('worktags.workday_code');
+    }
+
+    public function loadLatestBiennium()
+    {
+        $uwBudget = UwBudget::query()->where('budgetno', '=', $this->budgetno)
+            ->where('BienniumYear', '=', setting('current-biennium'))
+            ->first();
+
+        if (!$uwBudget instanceof UwBudget) {
+            $uwBudget = UwBudget::query()->where('budgetno', '=', $this->budgetno)
+                ->orderBy('BienniumYear', 'desc')
+                ->first();
+        }
+
+        if (!$uwBudget instanceof UwBudget) {
+            $uwBudget = new UwBudget();
+            $uwBudget->budgetno = $this->budgetno;
+        }
+
+        $this->setRelation('uw', $uwBudget);
+    }
+
+
+
 }

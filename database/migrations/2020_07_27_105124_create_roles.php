@@ -11,14 +11,30 @@ class CreateRoles extends Migration
      *
      * @return void
      */
+
+     protected $initialUsers = [
+        'nbedani' => 'budget:super'
+    ];
+
     public function up()
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
-            $table->char('uwnetid', 8)->charset('utf8')->collation('utf8_unicode_ci');
+            $table->char('uwnetid', 8); //->charset('utf8')->collation('utf8_unicode_ci');
             $table->string('role', 40);
             $table->timestamps();
         });
+        $this->fill();
+    }
+
+    public function fill()
+    {
+        foreach ($this->initialUsers as $uwnetid => $role) {
+            \App\Models\Role::firstOrCreate([
+                'uwnetid' => $uwnetid,
+                'role' => $role,
+            ]);
+        }
     }
 
     /**

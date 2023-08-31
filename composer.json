@@ -38,7 +38,8 @@
         "psr-4": {
             "App\\": "app/",
             "Uworgws\\Aclkit\\": "packages/uworgws/aclkit/src",
-            "Uworgws\\Formkit\\": "packages/uworgws/formkit/src"
+            "Uworgws\\Formkit\\": "packages/uworgws/formkit/src",
+            "Uworgws\\Importkit\\": "packages/uworgws/importkit/src"
         },
         "classmap": [
             "database/seeds",

@@ -4,7 +4,6 @@ namespace App\Models;
 
 use App\Auth\User;
 use App\Contracts\HasNames;
-use Config;
 
 /**
  * @property integer $person_id
@@ -17,12 +16,8 @@ use Config;
  */
 class Person extends ReadOnlyModel implements HasNames
 {
-    protected $table;
+    protected $table = 'shared.uw_persons';
     protected $primaryKey = 'person_id';
-
-    public function __construct() {
-        $this->table = Config::get('app.database_shared') . '.uw_persons'; 
-} 
 
     public function getFirst()
     {

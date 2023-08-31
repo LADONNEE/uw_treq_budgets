@@ -4,7 +4,7 @@ namespace App\Repositories\Budget;
 
 use App\Models\BudgetBiennium;
 use App\Services\BienniumsService;
-use Config;
+
 
 class BudgetSearch
 {
@@ -12,13 +12,13 @@ class BudgetSearch
     protected $report;
     protected $searchterm;
     public $sql;
-    protected $table_shared;
+    protected $database_shared;
 
     public function __construct($searchterm, $biennium = null)
     {
         $this->setSearchTerm($searchterm);
         $this->biennium = ($biennium) ?: (new BienniumsService())->current();
-        $this->table_shared = Config::get('app.database_shared') ; 
+        $this->database_shared = config('app.database_shared') ; 
 
     }
 
@@ -44,13 +44,13 @@ class BudgetSearch
         $terms = $this->parseTerms($this->searchterm);
         $query = BudgetBiennium::from('budget_biennium_view AS b')
             ->select('b.*')
-            ->leftJoin($this->table_shared . '.uw_persons AS pi', function($join) {
+            ->leftJoin($this->database_shared . '.uw_persons AS pi', function($join) {
                 $join->on('b.pi_person_id', '=', 'pi.person_id');
             })
-            ->leftJoin($this->table_shared . '.uw_persons AS fiscal', function($join) {
+            ->leftJoin($this->database_shared . '.uw_persons AS fiscal', function($join) {
                 $join->on('b.fiscal_person_id', '=', 'fiscal.person_id');
             })
-            ->leftJoin($this->table_shared . '.uw_persons AS bus', function($join) {
+            ->leftJoin($this->database_shared . '.uw_persons AS bus', function($join) {
                 $join->on('b.business_person_id', '=', 'bus.person_id');
             })
             ->where('b.biennium', $this->biennium)

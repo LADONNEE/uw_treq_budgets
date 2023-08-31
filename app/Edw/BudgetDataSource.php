@@ -13,11 +13,17 @@ class BudgetDataSource
     /* @var $edw EdwConnection */
     protected $edw;
     protected $scope;
+    protected $uworg_hierarchy;
+    protected $uworg_top_costcenter_hierarchy;
 
     public function __construct(EdwConnection $edw)
     {
         $this->edw = $edw;
         $this->scope = config('budgets.scope');
+        $this->uworg_hierarchy = config('app.uworg_hierarchy'); 
+        $this->uworg_top_costcenter_hierarchy = config('app.uworg_top_costcenter_hierarchy'); 
+
+        //uworg_top_costcenter_hierarchy
     }
 
     /**
@@ -31,6 +37,35 @@ class BudgetDataSource
             '__COLLEGE_ORGS__' => $this->getScope('college-codes'),
             '__ORG_CODES__' => $this->getScope('org-codes'),
             '__BUDGETS__' => $this->getScope('budgets'),
+        ]);
+        return $this->edw->fetchAssoc($sql);
+    }
+
+    public function getWorktags($tagType)
+    {
+        $queryFile = sprintf('%s/Queries/sql/worktags-%s.sql', __DIR__, strtolower($tagType));
+
+        $sql = sqlInclude($queryFile, [
+            '__UWORG_HIERARCHY_LIKE__' => $this->uworg_hierarchy,
+        ]);
+        return $this->edw->fetchAssoc($sql);
+    }
+
+    public function getWorktagsByCostCenter($topCostCenterHierarchyWID = $this->uworg_top_costcenter_hierarchy)
+    {
+        $sql = sqlInclude(__DIR__ . '/Queries/sql/worktags-by-cost-center.sql', [
+            '__TOP_CCH_WID__' => $topCostCenterHierarchyWID,
+        ]);
+
+        return $this->edw->fetchAssoc($sql);
+    }
+
+    public function getWorktagHierarchy($tagType)
+    {
+        $queryFile = sprintf('%s/Queries/sql/hierarchy-%s.sql', __DIR__, strtolower($tagType));
+
+        $sql = sqlInclude($queryFile, [
+            '__UWORG_HIERARCHY_LIKE__' => $this->uworg_hierarchy,
         ]);
         return $this->edw->fetchAssoc($sql);
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package edu.uw.org.college
+ * @package edu.uw.environment.college
  */
 
 /**

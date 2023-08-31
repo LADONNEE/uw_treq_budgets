@@ -4,7 +4,6 @@ namespace App\Updaters;
 
 use App\Models\Contact;
 use Illuminate\Support\Facades\DB;
-use Config;
 
 class ContactUpdater
 {
@@ -39,9 +38,7 @@ class ContactUpdater
      */
     private static function linkUwPerson()
     {
-        $sql = sqlInclude(__DIR__ . '/Queries/sql/uw_person_link.sql',
-                    ['__DBSHARED__' => Config::get('app.database_shared') ?? 'shared'],
-                );
+        $sql = sqlInclude(__DIR__ . '/Queries/sql/uw_person_link.sql');
         DB::statement($sql);
     }
 }

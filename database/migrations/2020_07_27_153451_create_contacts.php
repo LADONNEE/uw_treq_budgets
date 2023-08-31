@@ -16,7 +16,7 @@ class CreateContacts extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('person_id')->nullable();
-            $table->char('uwnetid', 8)->charset('utf8')->collation('utf8_unicode_ci')->nullable();
+            $table->char('uwnetid', 8)->nullable(); //->charset('utf8')->collation('utf8_unicode_ci')->nullable();
             $table->integer('studentno')->nullable();
             $table->integer('employeeid')->nullable();
             $table->string('firstname', 50)->nullable();

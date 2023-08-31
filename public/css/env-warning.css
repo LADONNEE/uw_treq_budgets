@@ -1,0 +1,130 @@
+.arrow-ribbon {
+  background: #dc3545;
+  color: #fff;
+  padding: 0 25px;
+  text-align: center;
+  position: fixed;
+  top: -60px;
+  left: 230px;
+  z-index: 10000;
+  height: 41px;
+  width: 185px;
+  font-size: 15px;
+  animation: slide 1.15s forwards 1s;
+  box-sizing: border-box;
+}
+
+.arrow-ribbon:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: -2px;
+  top: 41px;
+  border-left: 96px solid transparent;
+  border-right: 92px solid transparent;
+  border-top: 15px solid #dc3545;
+}
+
+.arrow-ribbon.modal-trigger,
+.arrow-ribbon.modal-trigger:link,
+.arrow-ribbon.modal-trigger:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.arrow-ribbon.modal-trigger:hover,
+.arrow-ribbon.modal-trigger:active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.coe-util__modal__backdrop {
+  display: table;
+  position: fixed;
+  z-index: 9998;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  transition: opacity .3s ease;
+}
+
+.coe-util__modal__backdrop.transition {
+  transition: opacity .3s ease-out;
+  opacity: 0;
+}
+
+.coe-util__modal__position {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.coe-util__modal__container {
+  position: relative;
+  top: 0;
+  width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  border: 3px solid grey;
+  transition: top .3s ease;
+}
+
+.coe-util__modal__backdrop.transition .coe-util__modal__container {
+  transition: top .3s ease-out;
+  top: -20px;
+}
+
+.coe-util__modal__header {
+  background-color: #FAFAFA;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: baseline;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #EEEEEE;
+  border-top-left-radius: calc(.3rem - 1px);
+  border-top-right-radius: calc(.3rem - 1px);
+  font-weight: bold;
+}
+
+.coe-util__modal__close {
+  font-size: 24px;
+  opacity: .5;
+}
+
+.coe-util__modal__close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.coe-util__modal__body {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.coe-util__modal__footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: .75rem;
+  border-bottom-right-radius: calc(.3rem - 1px);
+  border-bottom-left-radius: calc(.3rem - 1px);
+}
+
+@keyframes slide {
+  100% {
+    top: 0;
+  }
+}

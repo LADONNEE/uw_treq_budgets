@@ -22,6 +22,11 @@ Route::group(array('prefix' => 'budgets'), function($route) {
     $route->get('{budget}/manager', 'ManagersController@edit');
     $route->post('{budget}/manager', 'ManagersController@update');
 
+    $route->get('costcenters', 'CostcentersController@index');
+    $route->get('costcenters/{costcenter}', 'CostcentersController@show');
+    $route->get('costcenters/{costcenter}/edit', 'CostcentersController@edit');
+    $route->get('costcenters/{costcenter}/update', 'CostcentersController@update');
+
     $route->get('missing', 'MissingController@index');
     $route->get('{budget}/missing', 'MissingController@edit');
     $route->post('{budget}/missing', 'MissingController@update');
@@ -51,6 +56,11 @@ Route::group(array('prefix' => 'budgets'), function($route) {
     $route->post('user', 'UsersController@store');
     $route->get('user/{uwnetid}', 'UsersController@edit');
     $route->post('user/{uwnetid}', 'UsersController@update');
+
+    $route->get('hierarchy/{type?}', 'HierarchyController@index')->name('hierarchy');
+
+    $route->get('worktags', 'WorktagsController@index')->name('worktags');
+    $route->get('worktag/{worktag}', 'WorktagsController@show')->name('worktag');
 
     $route->get('faculty', 'FacultyController@index')->name('faculty-index');
     $route->get('faculty/create', 'FacultyController@create')->name('faculty-create');

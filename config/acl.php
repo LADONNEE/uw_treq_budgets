@@ -19,12 +19,14 @@ return [
     'reconciler' => ['budget:viewer', 'budget-notes'],
     'settings' => [],
     'user-mgmt' => [],
+    'uwft' => [],
+    'impersonate' => [],
     'who-am-i' => [],
     'workday' => [],
 
     'budget:user' => [],
     'budget:viewer' => ['budget:user', 'files:viewer'],
     'budget:fiscal' => ['budget:user', 'reconciler', 'create-tasks', 'delete-tasks', 'reassign-tasks', 'edit-notes', 'cancel'],
-    'budget:admin' => ['budget:fiscal', 'settings', 'user-mgmt', 'delete', 'manage-faculty', 'manager'],
-    'budget:super' => ['budget:admin', 'who-am-i', 'act-on-behalf'],
+    'budget:admin' => ['budget:fiscal', 'settings', 'user-mgmt', 'delete', 'manage-faculty', 'manager', 'uwft'],
+    'budget:super' => ['budget:admin', 'who-am-i', 'impersonate', 'act-on-behalf'],
 ];

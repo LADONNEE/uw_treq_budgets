@@ -23,7 +23,7 @@ class BienniumDeleteTask
      * Pruning orphan data is a nice idea, but this is not a safe approach
      *
      * We have set up the Allocation data model so that fiscal can create allocations
-     * against other unit's budgets. This creates a UWORG `budgets` record with no
+     * against other unit's budgets. This creates a COENV `budgets` record with no
      * matching UW `uw_budgets_cache` record and these are required for their
      * related allocation records.
      */

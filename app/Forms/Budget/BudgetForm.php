@@ -8,7 +8,7 @@ use App\Models\Budget;
 use App\Models\BudgetLog;
 use App\Utilities\FirstWords;
 use Illuminate\Support\Facades\DB;
-use Config;
+
 
 class BudgetForm extends Form
 {
@@ -18,7 +18,7 @@ class BudgetForm extends Form
     public function __construct(Budget $budget)
     {
         $this->budget = $budget;
-        $this->table_uw_persons = Config::get('app.database_shared') . '.uw_persons'; 
+        $this->table_uw_persons = config('app.database_shared') . '.uw_persons'; 
     }
 
     public function createInputs()

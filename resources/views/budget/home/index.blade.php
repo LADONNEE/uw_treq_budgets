@@ -9,6 +9,6 @@
     <p>This list includes budgets you are watching, where you are the Principal Investigator, or where you are the
         fiscal contact.</p>
 
-    @include('budget/budgets/_table')
+    @include('budgets/_table')
 
 @stop

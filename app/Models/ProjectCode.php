@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Config;
 
 /**
  * @property integer $id
