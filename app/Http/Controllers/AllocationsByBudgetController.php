@@ -15,7 +15,7 @@ class AllocationsByBudgetController
     {
         $allocations = Allocation::where('budget_id', $budget->id)->get();
 
-        return view('budget/effort/allocations-by-budget/index', compact('allocations', 'budget'));
+        return view('effort/allocations-by-budget/index', compact('allocations', 'budget'));
     }
 
     public function edit(Allocation $allocation, Budget $budget)
@@ -32,7 +32,7 @@ class AllocationsByBudgetController
         $defaultFiscalPerson = DefaultFiscalPerson::defaultFiscalPerson()->getFullName();
 
 
-        return view('budget/effort/allocations/edit', compact('allocation', 'allocations', 'form', 'budget', 'faculty', 'returnToBudget', 'defaultFiscalPerson'));
+        return view('effort/allocations/edit', compact('allocation', 'allocations', 'form', 'budget', 'faculty', 'returnToBudget', 'defaultFiscalPerson'));
     }
 
     public function update(Allocation $allocation, Budget $budget)
@@ -54,7 +54,7 @@ class AllocationsByBudgetController
         ]));
         $defaultFiscalPerson = DefaultFiscalPerson::defaultFiscalPerson()->getFullName();
 
-        return view('budget/effort/allocations/create', compact('form', 'budget', 'defaultFiscalPerson'));
+        return view('effort/allocations/create', compact('form', 'budget', 'defaultFiscalPerson'));
     }
 
     public function store()

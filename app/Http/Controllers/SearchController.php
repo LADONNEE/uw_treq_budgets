@@ -12,7 +12,7 @@ class SearchController extends AbstractController
         $report = new BudgetSearch($request->get('q'));
         $format = $request->get('format');
         if ($format == 'csv') {
-            return view('budget.budgets.csv', ['budgets' => $report->budgets()]);
+            return view('budgets.csv', ['budgets' => $report->budgets()]);
         }
         return view('budget/search/index', compact('report'));
     }

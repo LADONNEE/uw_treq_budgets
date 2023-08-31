@@ -33,18 +33,18 @@ class MissingController extends AbstractController
 
         if (wantsCsv()) {
             $budgets = $query->with('purpose')->get();
-            return response()->view('budget/budgets/csv', compact('budgets'));
+            return response()->view('budgets/csv', compact('budgets'));
         }
 
         $budgets = $query->get();
-        return view('budget/missing/index', compact('budgets'));
+        return view('missing/index', compact('budgets'));
     }
 
     public function edit(Budget $budget)
     {
         $this->authorize('budget:fiscal');
         $form = new BudgetForm($budget);
-        return view('budget.missing._edit', compact('budget', 'form'));
+        return view('missing._edit', compact('budget', 'form'));
     }
 
     public function update(Budget $budget)
@@ -56,14 +56,14 @@ class MissingController extends AbstractController
                 'status' => 202,
                 'result' => 'success',
                 'id' => "budget-{$budget->id}",
-                'html' => view('budget.missing._row', compact('budget'))->render(),
+                'html' => view('missing._row', compact('budget'))->render(),
             ]);
         }
         return response()->json([
             'status' => 400,
             'result' => 'invalid',
             'errors' => $form->getErrors(),
-            'html' => view('budget.missing._edit', compact('budget', 'form'))->render(),
+            'html' => view('missing._edit', compact('budget', 'form'))->render(),
         ]);
     }
 

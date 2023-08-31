@@ -15,7 +15,7 @@ class CancelController extends Controller
         $allocations = $effortReport->effortReportAllocations;
         $defaultFiscalPerson = DefaultFiscalPerson::defaultFiscalPerson()->getFullName();
         $form = new CancelForm($effortReport);
-        return view('budget/effort/cancel/edit', compact('faculty', 'allocations', 'defaultFiscalPerson', 'effortReport', 'form'));
+        return view('effort/cancel/edit', compact('faculty', 'allocations', 'defaultFiscalPerson', 'effortReport', 'form'));
     }
 
     public function update(EffortReport $effortReport): RedirectResponse

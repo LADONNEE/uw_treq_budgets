@@ -34,17 +34,17 @@ class ProjectCodeController extends AbstractController
         $projectcodes = $query->get();
         
         if (wantsCsv()) {
-            return response()->view('budget/projectcode/csv', compact('projectcodes'));
+            return response()->view('projectcode/csv', compact('projectcodes'));
         }
 
-        return view('budget/projectcode/index', compact('projectcodes'));
+        return view('projectcode/index', compact('projectcodes'));
     }
 
     public function edit(ProjectCode $projectcode)
     {
         $this->authorize('budget:fiscal');
         $form = new ProjectCodeForm($projectcode);
-        return view('budget.projectcode._edit', compact('projectcode', 'form'));
+        return view('projectcode._edit', compact('projectcode', 'form'));
     }
 
     public function update(ProjectCode $projectcode)
@@ -56,14 +56,14 @@ class ProjectCodeController extends AbstractController
                 'status' => 202,
                 'result' => 'success',
                 'id' => "projectcode-{$projectcode->id}",
-                'html' => view('budget.projectcode._row', compact('projectcode'))->render(),
+                'html' => view('projectcode._row', compact('projectcode'))->render(),
             ]);
         }
         return response()->json([
             'status' => 400,
             'result' => 'invalid',
             'errors' => $form->getErrors(),
-            'html' => view('budget.projectcode._edit', compact('projectcode', 'form'))->render(),
+            'html' => view('projectcode._edit', compact('projectcode', 'form'))->render(),
         ]);
     }
 

@@ -24,6 +24,6 @@ class AllocationsByFacultyController
         $activeEffortReports = EffortReport::getLatestAndActiveReportsByFaculty($faculty->id);
         $defaultFiscalPerson = DefaultFiscalPerson::defaultFiscalPerson()->getFullName();
 
-        return view('budget/effort/allocations-by-faculty/index', compact('allocations', 'faculty', 'now', 'effortReports', 'activeEffortReports', 'defaultFiscalPerson'));
+        return view('effort/allocations-by-faculty/index', compact('allocations', 'faculty', 'now', 'effortReports', 'activeEffortReports', 'defaultFiscalPerson'));
     }
 }

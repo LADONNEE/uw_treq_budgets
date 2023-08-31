@@ -17,14 +17,14 @@ class FacultyController extends Controller
         $activeFaculty = Contact::activeContacts($faculty);
         $inactiveFaculty = Contact::inactiveContacts($faculty);
 
-        return view('budget/faculty/index', compact('activeFaculty', 'inactiveFaculty'));
+        return view('faculty/index', compact('activeFaculty', 'inactiveFaculty'));
     }
 
     public function create()
     {
         $form = new FacultyForm(new Contact());
 
-        return view('budget/faculty/create', compact('form'));
+        return view('faculty/create', compact('form'));
     }
 
     public function store()
@@ -42,7 +42,7 @@ class FacultyController extends Controller
     {
         $form = new FacultyForm($faculty);
 
-        return view('budget/faculty/edit', compact('form', 'faculty'));
+        return view('faculty/edit', compact('form', 'faculty'));
     }
 
     public function update(Contact $faculty)

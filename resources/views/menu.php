@@ -18,7 +18,7 @@ return [
         ['Settings', action('SettingsController@index'), 'budget:admin'],
         ['Scope', action('ScopeController@index')],
         ['Users', action('UsersController@index'), 'budget:admin'],
-        ['Manage Faculty', action('FacultyController@index'), 'manage-faculty'],
+        //['Manage Faculty', action('FacultyController@index'), 'manage-faculty'],
         ['UWFT Worktags', route('worktags'), 'uwft'],
     ],
 ];

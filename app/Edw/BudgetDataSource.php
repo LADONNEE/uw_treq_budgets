@@ -51,10 +51,10 @@ class BudgetDataSource
         return $this->edw->fetchAssoc($sql);
     }
 
-    public function getWorktagsByCostCenter($topCostCenterHierarchyWID = $this->uworg_top_costcenter_hierarchy)
+    public function getWorktagsByCostCenter()
     {
         $sql = sqlInclude(__DIR__ . '/Queries/sql/worktags-by-cost-center.sql', [
-            '__TOP_CCH_WID__' => $topCostCenterHierarchyWID,
+            '__TOP_CCH_WID__' => $this->uworg_top_costcenter_hierarchy,
         ]);
 
         return $this->edw->fetchAssoc($sql);

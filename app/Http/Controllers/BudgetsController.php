@@ -34,25 +34,25 @@ class BudgetsController extends AbstractController
             ->with('business');
         if (wantsCsv()) {
             $budgets = $query->with('purpose')->with('uw')->get();
-            return response()->view('budget/budgets/csv', compact('budgets'));
+            return response()->view('budgets/csv', compact('budgets'));
         }
         $budgets = $query->get();
         $bienniums = $this->bienniums->budgetScope();
-        return view('budget/budgets/index', compact('biennium', 'bienniums', 'budgets'));
+        return view('budgets/index', compact('biennium', 'bienniums', 'budgets'));
     }
 
     public function show(Budget $budget)
     {
         $assignLog = BudgetLog::where('budget_id', $budget->id)->get();
         $allocations = Allocation::where('budget_id', $budget->id)->get();
-        return view('budget/budgets/show', compact('budget', 'assignLog', 'allocations'));
+        return view('budgets/show', compact('budget', 'assignLog', 'allocations'));
     }
 
     public function edit(Budget $budget)
     {
         $this->authorize('budget:fiscal');
         $form = new BudgetForm($budget);
-        return view('budget/budgets/edit', compact('budget', 'form'));
+        return view('budgets/edit', compact('budget', 'form'));
     }
 
     public function update(Budget $budget)

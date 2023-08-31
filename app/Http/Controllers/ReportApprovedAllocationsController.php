@@ -21,9 +21,9 @@ class ReportApprovedAllocationsController extends Controller
         })->unique('start_at');
 
         if (wantsCsv()) {
-            return response()->view('budget/effort/effort-report-allocations-csv', compact('report', 'period', 'year'));
+            return response()->view('effort/effort-report-allocations-csv', compact('report', 'period', 'year'));
         }
 
-        return view('budget/effort/reports/approved-allocations/index', compact('report', 'dates', 'period', 'year'));
+        return view('effort/reports/approved-allocations/index', compact('report', 'dates', 'period', 'year'));
     }
 }

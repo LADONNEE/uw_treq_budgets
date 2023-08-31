@@ -12,9 +12,9 @@ class ManagersController extends AbstractController
     {
         $form = new ManagerForm($budget);
         if (request()->ajax()) {
-            return view('budget/managers/sidebar', compact('budget', 'form'));
+            return view('managers/sidebar', compact('budget', 'form'));
         }
-        return view('budget/managers/index', compact('budget', 'form'));
+        return view('managers/index', compact('budget', 'form'));
     }
 
     public function update(Budget $budget)

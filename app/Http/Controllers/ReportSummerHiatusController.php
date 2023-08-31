@@ -22,9 +22,9 @@ class ReportSummerHiatusController extends Controller
         })->unique('start_at');
 
         if (wantsCsv()) {
-            return response()->view('budget/effort/summer-hiatus-csv', compact('report', 'period', 'year'));
+            return response()->view('effort/summer-hiatus-csv', compact('report', 'period', 'year'));
         }
 
-        return view('budget/effort/reports/summer-hiatus/index', compact('report', 'dates', 'period', 'year', 'reportDateRange'));
+        return view('effort/reports/summer-hiatus/index', compact('report', 'dates', 'period', 'year', 'reportDateRange'));
     }
 }

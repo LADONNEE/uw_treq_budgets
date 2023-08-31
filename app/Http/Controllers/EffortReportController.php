@@ -30,7 +30,7 @@ class EffortReportController extends Controller
             $approvals =  ApprovalsFactory::generateApprovals($reportPeriod->type, $reportPeriod->year, $faculty->id);
         }
 
-        return view('budget/effort/effort-report/create', compact('faculty', 'effortReport', 'allocations', 'reportPeriod', 'approvals', 'defaultFiscalPerson', 'invalidPeriods'));
+        return view('effort/effort-report/create', compact('faculty', 'effortReport', 'allocations', 'reportPeriod', 'approvals', 'defaultFiscalPerson', 'invalidPeriods'));
     }
 
     public function store(Contact $faculty)
@@ -77,6 +77,6 @@ class EffortReportController extends Controller
             return new AllocationsWithCostingTableData($row);
         }, $allocationsWithCostingTableData);
 
-        return view('budget/effort/effort-report/show', compact('faculty', 'effortReport', 'allocations', 'allocationsWithDefaults', 'defaultFiscalPerson', 'niceAllocationsWithCostingTableData'));
+        return view('effort/effort-report/show', compact('faculty', 'effortReport', 'allocations', 'allocationsWithDefaults', 'defaultFiscalPerson', 'niceAllocationsWithCostingTableData'));
     }
 }

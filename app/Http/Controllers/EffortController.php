@@ -13,6 +13,6 @@ class EffortController extends Controller
         $facultyWithEffort = Contact::activeFacultyWithEffortReports();
         $reports = new HomeCollection(user());
 
-        return view('budget/effort/index', compact('allActiveFaculty', 'facultyWithEffort', 'reports'));
+        return view('effort/index', compact('allActiveFaculty', 'facultyWithEffort', 'reports'));
     }
 }

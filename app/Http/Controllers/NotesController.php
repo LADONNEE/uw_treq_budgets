@@ -35,9 +35,9 @@ class NotesController extends AbstractController
         $note->budget_id = $budget->id;
         $form = new NoteForm($note);
         if (request()->ajax()) {
-            return view('budget/notes/_form', compact('budget', 'form'));
+            return view('notes/_form', compact('budget', 'form'));
         }
-        return view('budget/notes/create', compact('budget', 'form'));
+        return view('notes/create', compact('budget', 'form'));
     }
 
     public function store(Budget $budget)
@@ -58,7 +58,7 @@ class NotesController extends AbstractController
     {
         $form = new NoteForm($note);
         $budget = $note->budget;
-        return view('budget/notes/edit', compact('budget', 'note', 'form'));
+        return view('notes/edit', compact('budget', 'note', 'form'));
     }
 
     public function update(Note $note)

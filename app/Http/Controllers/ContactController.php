@@ -34,7 +34,7 @@ class ContactController extends AbstractController
         $this->authorize('budget:fiscal');
 
         $form = new ContactPersonForm($contact);
-        return view('budget.contacts.index', compact('contact', 'form'));
+        return view('contacts.index', compact('contact', 'form'));
     }
 
     public function update(Contact $contact)
@@ -50,18 +50,18 @@ class ContactController extends AbstractController
                 'status' => 202,
                 'result' => 'success',
                 'defaultBudgetId' => "default-budget-{$contact->id}",
-                'defaultBudget' => view('budget.effort._update-faculty-table-default-budget', compact('facultyMember', 'referrer'))->render(),
+                'defaultBudget' => view('effort._update-faculty-table-default-budget', compact('facultyMember', 'referrer'))->render(),
                 'financeManagerId' => "finance-manager-{$contact->id}",
-                'financeManager' => view('budget.effort._update-faculty-table-finance-manager', compact('facultyMember', 'referrer'))->render(),
+                'financeManager' => view('effort._update-faculty-table-finance-manager', compact('facultyMember', 'referrer'))->render(),
                 'is8020Id' => "80_20-{$contact->id}",
-                'is8020' => view('budget.effort._update-faculty-table-is8020', compact('facultyMember', 'referrer'))->render(),
+                'is8020' => view('effort._update-faculty-table-is8020', compact('facultyMember', 'referrer'))->render(),
             ]);
         }
         return response()->json([
             'status' => 400,
             'result' => 'invalid',
             'errors' => $form->getErrors(),
-            'html' => view('budget.contacts.index', compact('contact', 'form'))->render(),
+            'html' => view('contacts.index', compact('contact', 'form'))->render(),
         ]);
     }
 }

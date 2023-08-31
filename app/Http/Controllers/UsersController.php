@@ -15,7 +15,7 @@ class UsersController extends AbstractController
         $users = (new UsersReport())->getReport();
         $form = new PickPersonForm();
 
-        return view('budget/users/index', compact('users', 'form'));
+        return view('users/index', compact('users', 'form'));
     }
 
     public function select()
@@ -32,7 +32,7 @@ class UsersController extends AbstractController
     {
         $this->authorize('budget:admin');
         $form = new AddPersonForm($uwnetid);
-        return view('budget/users/create', compact('form'));
+        return view('users/create', compact('form'));
     }
 
     public function store()
@@ -51,7 +51,7 @@ class UsersController extends AbstractController
         $user = user($uwnetid);
         $form = new UserForm($user);
 
-        return view('budget/users/edit', compact('form', 'user'));
+        return view('users/edit', compact('form', 'user'));
     }
 
     public function update($uwnetid)

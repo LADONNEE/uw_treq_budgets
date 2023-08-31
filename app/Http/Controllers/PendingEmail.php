@@ -12,6 +12,6 @@ class PendingEmail
         $job = new SendNotificationsJob($sender, true);
         $report = $job->report();
         $last = setting('email-sent');
-        return view('budget.pending-email.index', compact('report', 'last'));
+        return view('pending-email.index', compact('report', 'last'));
     }
 }
