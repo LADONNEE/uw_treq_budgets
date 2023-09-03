@@ -23,7 +23,7 @@ class PersonSearch
 
     public function getReport()
     {
-        $query = Person::from('shared.uw_persons AS p')
+        $query = Person::from( config('app.database_shared') . '.uw_persons AS p')
             ->orderBy('p.lastname')
             ->orderBy('p.firstname')
             ->take(5);

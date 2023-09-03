@@ -9,7 +9,7 @@ class UsersReport
     public function getReport()
     {
         $results = DB::table('roles AS r')
-            ->join('shared.uw_persons AS p', 'r.uwnetid', '=', 'p.uwnetid')
+            ->join( config('app.database_shared') . '.uw_persons AS p', 'r.uwnetid', '=', 'p.uwnetid')
             ->select([
                 'r.uwnetid',
                 'r.role',

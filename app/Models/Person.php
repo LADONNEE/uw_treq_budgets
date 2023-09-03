@@ -16,7 +16,7 @@ use App\Contracts\HasNames;
  */
 class Person extends ReadOnlyModel implements HasNames
 {
-    protected $table = 'shared.uw_persons';
+    protected $table = config('app.database_shared') . '.uw_persons';
     protected $primaryKey = 'person_id';
 
     public function getFirst()

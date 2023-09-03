@@ -46,7 +46,7 @@ class ManagerForm extends Form
     public static function optionsManagers()
     {
         $out = ['' => '(no cost center approver)'];
-        $fiscals = DB::table('shared.uw_persons AS p')
+        $fiscals = DB::table( config('app.database_shared') . '.uw_persons AS p')
             ->join('managers_view', 'managers_view.person_id', '=', 'p.person_id')
             ->select('managers_view.person_id', 'p.firstname', 'p.lastname')
             ->orderBy('p.firstname')
