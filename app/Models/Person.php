@@ -16,8 +16,14 @@ use App\Contracts\HasNames;
  */
 class Person extends ReadOnlyModel implements HasNames
 {
-    protected $table = config('app.database_shared') . '.uw_persons';
+    protected $table;
     protected $primaryKey = 'person_id';
+
+    public function __construct()
+    {
+        $this->table = config('app.database_shared') . '.uw_persons';
+    }
+
 
     public function getFirst()
     {

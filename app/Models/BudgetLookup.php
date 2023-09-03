@@ -13,7 +13,12 @@ namespace App\Models;
  */
 class BudgetLookup extends ReadOnlyModel
 {
-    protected $table = config('app.database_shared') . '.budgets';
+    protected $table;
     protected $primaryKey = 'budget_id';
+
+    public function __construct()
+    {
+        $this->table = config('app.database_shared') . '.budgets';
+    }
 
 }
