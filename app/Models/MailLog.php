@@ -26,7 +26,7 @@ class MailLog extends Model
         'metadata',
         'error',
     ];
-    protected $dates = [
+    protected $casts = [
         'attempted_at',
         'sent_at',
     ];

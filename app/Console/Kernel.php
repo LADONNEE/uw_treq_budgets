@@ -26,6 +26,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         $schedule->command('update:uwods')->dailyAt('01:02');
+        $schedule->command('cache:prune-stale-tags')->hourly();
     }
 
     /**

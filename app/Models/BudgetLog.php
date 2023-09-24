@@ -16,7 +16,7 @@ use Carbon\Carbon;
 class BudgetLog extends AbstractModel
 {
     protected $table = 'budgetlog';
-    protected $dates = [
+    protected $casts = [
         'changed_at',
     ];
     protected $fillable = [

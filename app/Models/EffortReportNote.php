@@ -28,7 +28,7 @@ class EffortReportNote extends AbstractModel
         'created_by',
         'edited_by',
     ];
-    protected $dates = [
+    protected $casts = [
         'created_at',
         'updated_at',
     ];

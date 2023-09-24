@@ -50,7 +50,7 @@ class UwBudget extends AbstractModel
         'budgetno',
         'updating',
     ];
-    protected $dates = [
+    protected $casts = [
         'EffectiveDate',
         'TotalPeriodBeginDate',
         'TotalPeriodEndDate',

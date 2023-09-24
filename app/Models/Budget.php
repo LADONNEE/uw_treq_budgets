@@ -42,7 +42,7 @@ class Budget extends AbstractModel
         'purpose_brief',
         'food',
     ];
-    protected $dates = [
+    protected $casts = [
         'EffectiveDate',
         'TotalPeriodBeginDate',
         'TotalPeriodEndDate',

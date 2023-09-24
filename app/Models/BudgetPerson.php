@@ -28,7 +28,7 @@ class BudgetPerson extends AbstractModel implements HasNames
         'eventtype',
         'data',
     ];
-    protected $dates = [
+    protected $casts = [
         'created_at',
         'updated_at',
     ];

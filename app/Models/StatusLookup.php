@@ -21,7 +21,7 @@ class StatusLookup extends AbstractModel
         'short',
         'full',
     ];
-    protected $dates = [
+    protected $casts = [
         'created_at',
         'updated_at',
     ];

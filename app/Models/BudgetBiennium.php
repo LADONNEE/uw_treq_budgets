@@ -26,7 +26,7 @@ class BudgetBiennium extends AbstractModel
 {
     protected $table = 'budget_biennium_view';
     protected $fillable = [];
-    protected $dates = [];
+    protected $casts = [];
 
     public function getFoodPolicy()
     {

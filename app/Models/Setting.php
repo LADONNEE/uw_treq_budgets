@@ -19,7 +19,7 @@ class Setting extends Model
         'value',
         'changed_by',
     ];
-    protected $dates = [
+    protected $casts = [
         'created_at',
         'updated_at',
     ];
