@@ -27,8 +27,8 @@ class MailLog extends Model
         'error',
     ];
     protected $casts = [
-        'attempted_at',
-        'sent_at',
+        'attempted_at' => 'datetime',
+        'sent_at' => 'datetime'
     ];
     public $timestamps = false;
 

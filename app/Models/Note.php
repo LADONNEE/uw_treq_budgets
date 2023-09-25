@@ -27,8 +27,8 @@ class Note extends AbstractModel
         'section',
     ];
     protected $casts = [
-        'created_at',
-        'updated_at',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime'
     ];
 
     /**

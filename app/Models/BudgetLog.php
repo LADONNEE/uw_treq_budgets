@@ -17,7 +17,7 @@ class BudgetLog extends AbstractModel
 {
     protected $table = 'budgetlog';
     protected $casts = [
-        'changed_at',
+        'changed_at' => 'datetime'
     ];
     protected $fillable = [
         'uwnetid',

@@ -29,8 +29,8 @@ class BudgetPerson extends AbstractModel implements HasNames
         'data',
     ];
     protected $casts = [
-        'created_at',
-        'updated_at',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime'
     ];
 
     public function person()

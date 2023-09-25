@@ -43,11 +43,11 @@ class Budget extends AbstractModel
         'food',
     ];
     protected $casts = [
-        'EffectiveDate',
-        'TotalPeriodBeginDate',
-        'TotalPeriodEndDate',
-        'created_at',
-        'updated_at',
+        'EffectiveDate' => 'datetime',
+        'TotalPeriodBeginDate' => 'datetime',
+        'TotalPeriodEndDate' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime'
     ];
 
     public static $foodOptions = [

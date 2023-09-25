@@ -51,11 +51,11 @@ class UwBudget extends AbstractModel
         'updating',
     ];
     protected $casts = [
-        'EffectiveDate',
-        'TotalPeriodBeginDate',
-        'TotalPeriodEndDate',
-        'created_at',
-        'updated_at',
+        'EffectiveDate' => 'datetime',
+        'TotalPeriodBeginDate' => 'datetime',
+        'TotalPeriodEndDate' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime'
     ];
 
     protected static $type_lookup = [
