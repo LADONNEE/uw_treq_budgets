@@ -25,7 +25,7 @@ Route::group(array('prefix' => 'budgets'), function($route) {
     $route->get('costcenters', 'CostcentersController@index');
     $route->get('costcenters/{costcenter}', 'CostcentersController@show');
     $route->get('costcenters/{costcenter}/edit', 'CostcentersController@edit');
-    $route->get('costcenters/{costcenter}/update', 'CostcentersController@update');
+    $route->post('costcenters/{costcenter}/update', 'CostcentersController@update');
 
     $route->get('missing', 'MissingController@index');
     $route->get('{budget}/missing', 'MissingController@edit');
