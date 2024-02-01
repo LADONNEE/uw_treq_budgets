@@ -45,11 +45,10 @@ class CostcenterForm extends Form
         $this->costcenter->fiscal_person_id = $this->get('fiscal_person_id');
         $this->costcenter->save();
 
-        // TODO needs to be changed for uwft
-        // if ($managerChanged) {
-        //     $log = new BudgetLog();
-        //     $log->writeAssignFiscal(app('user')->uwnetid, $this->costcenter->fiscal_person_id, $this->costcenter);
-        // }
+        if ($managerChanged) {
+            $log = new BudgetLog();
+            $log->writeAssignFiscal(app('user')->uwnetid, $this->costcenter->fiscal_person_id, $this->costcenter);
+        }
 
     }
 

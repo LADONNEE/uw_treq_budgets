@@ -1,6 +1,6 @@
 <?php
 /**
- * @package edu.uw.environment.college
+ * @package app.treq.school
  */
 
 /**

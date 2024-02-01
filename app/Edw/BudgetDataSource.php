@@ -22,8 +22,6 @@ class BudgetDataSource
         $this->scope = config('budgets.scope');
         $this->uworg_hierarchy = config('app.uworg_hierarchy'); 
         $this->uworg_top_costcenter_hierarchy = config('app.uworg_top_costcenter_hierarchy'); 
-
-        //uworg_top_costcenter_hierarchy
     }
 
     /**
@@ -51,6 +49,16 @@ class BudgetDataSource
         return $this->edw->fetchAssoc($sql);
     }
 
+    public function getWorktagAssignee($tagType)
+    {
+        $queryFile = sprintf('%s/Queries/sql/assignees-%s.sql', __DIR__, strtolower($tagType));
+
+        $sql = sqlInclude($queryFile, [
+            '__TOP_CCH_WID__' => $this->uworg_top_costcenter_hierarchy,
+        ]);
+        return $this->edw->fetchAssoc($sql);
+    }
+
     public function getWorktagsByCostCenter()
     {
         $sql = sqlInclude(__DIR__ . '/Queries/sql/worktags-by-cost-center.sql', [
@@ -69,6 +77,7 @@ class BudgetDataSource
         ]);
         return $this->edw->fetchAssoc($sql);
     }
+
 
     /**
      * Extract the code values from application configuration

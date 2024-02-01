@@ -2,7 +2,7 @@
 
 namespace App\Updaters\Translator;
 
-use Uwcoenvws\Importkit\Contracts\SkipRuleContract;
+use Utilws\Importkit\Contracts\SkipRuleContract;
 
 class TranslatorSkipRule implements SkipRuleContract
 {

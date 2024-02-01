@@ -1,6 +1,6 @@
 <?php
 /**
- * @package edu.uw.org.pcore
+ * @package app.treq.pcore
  */
 
 /**

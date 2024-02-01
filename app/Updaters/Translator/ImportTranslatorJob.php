@@ -3,9 +3,9 @@
 namespace App\Updaters\Translator;
 
 use App\Models\WorktagsBudgetsFdmTranslator;
-use Uwcoenvws\Importkit\ConfiguredImportSource;
-use Uwcoenvws\Importkit\Parsers as Parse;
-use Uwcoenvws\Importkit\Readers\CsvFileReader;
+use Utilws\Importkit\ConfiguredImportSource;
+use Utilws\Importkit\Parsers as Parse;
+use Utilws\Importkit\Readers\CsvFileReader;
 
 class ImportTranslatorJob
 {

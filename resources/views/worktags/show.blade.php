@@ -52,7 +52,7 @@
 
         <p class="mb-0">
             Budget Numbers that will be migrated to this Worktag. This information is loaded periodically from
-            the <a href="https://uwft-prodweb1.s.uw.edu/FDMTWEB/">FDM Translator Tool</a>.
+            the <a href="{{config('custom.scl_url_doc_fdm')}}">FDM Translator Tool</a>.
         </p>
 
         @include('budgets._table', ['budgets' => $worktag->budgets])

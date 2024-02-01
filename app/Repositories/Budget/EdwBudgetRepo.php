@@ -1,6 +1,6 @@
 <?php
 /**
- * @package edu.uw.org.college
+ * @package app.treq.school
  */
 /**
  * Repository for EDW Budget records

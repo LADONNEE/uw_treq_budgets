@@ -1,7 +1,7 @@
 <?php
 namespace App\Auth;
 
-use Uworgws\Aclkit\RoleCheck;
+use Utilws\Aclkit\RoleCheck;
 use Illuminate\Support\ServiceProvider;
 
 class UwAuthServiceProvider extends ServiceProvider

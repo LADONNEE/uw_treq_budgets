@@ -74,7 +74,7 @@ abstract class BaseEffortReportMailable extends Mailable implements ProvidesMeta
 
         $cc = $this->ccPerson();
         if ($cc && $cc->uwnetid) {
-            $mailable->cc($cc->uwnetid . '@uw.edu', eFirstLast($cc));
+            $mailable->cc($cc->uwnetid . '@' . config('custom.scl_email_domain'), eFirstLast($cc));
         }
 
         return $mailable;

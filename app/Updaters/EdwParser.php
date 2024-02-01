@@ -1,6 +1,6 @@
 <?php
 /**
- * @package edu.uw.environment.college
+ * @package app.treq.school
  */
 
 /**
@@ -114,7 +114,9 @@ class EdwParser
         if (empty($value)) {
             return null;
         }
-        return iconv("ISO-8859-1", "UTF-8//TRANSLIT", (string) $value);
+        //return iconv("ISO-8859-1", "UTF-8//TRANSLIT", (string) $value);
+        
+        return mb_convert_encoding((string) $value, 'UTF-8', 'Windows-1252');
     }
 
     /**

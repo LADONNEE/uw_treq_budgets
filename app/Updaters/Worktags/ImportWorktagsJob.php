@@ -33,5 +33,8 @@ class ImportWorktagsJob
         (new WorktagsTask($this->edw, $this->parser))->run($this->tagTypes);
         (new WorktagsByCostCenterTask($this->edw, $this->parser))->run();
         (new LinkGrantsTask())->run();
+        // Load Principal Investigators as fiscal_person_id for worktags of type Grant
+        (new AssigneesTask($this->edw, $this->parser))->run([Worktag::TYPE_GRANT]);
+
     }    
 }

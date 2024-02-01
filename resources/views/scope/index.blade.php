@@ -44,7 +44,7 @@
     <hr>
 
     <p>
-        Budget scope is defined in the application configuration. Email IT &lt;itreq@uw.edu&gt;
+        Budget scope is defined in the application configuration. Email IT &lt;{{config('custom.scl_email_helpdesk')}}&gt;
         for changes.
     </p>
 

@@ -52,8 +52,6 @@ class ManagerForm extends Form
             ->orderBy('p.firstname')
             ->orderBy('p.lastname')
             ->get();
-
-            
         foreach ($fiscals as $fiscal) {
             $out[$fiscal->person_id] = "{$fiscal->firstname} {$fiscal->lastname}";
         }

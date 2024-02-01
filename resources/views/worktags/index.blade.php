@@ -6,10 +6,10 @@
     <h1 class="mb-4">Worktags</h1>
 
     <p>
-        UWFT Workday worktags that are related to the iSchool. For Cost Center worktags and
+        UWFT Workday worktags that are related to the {{config('custom.scl_long')}}. For Cost Center worktags and
         Program worktags we import worktags based on the relevant worktag hierarchy, starting with
-        the top "iSchool" hierarchy. We also import any worktag configured as a driver
-        that references a iSchool Cost Center. This gets us Gift, Grant, and also Program worktags.
+        the top "{{config('custom.scl_long')}}" hierarchy. We also import any worktag configured as a driver
+        that references a COE Cost Center. This gets us Gift, Grant, and also Program worktags.
         (Work in progress.)
     </p>
 

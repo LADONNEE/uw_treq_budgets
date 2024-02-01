@@ -2,7 +2,7 @@
 
 namespace App\Updaters\Translator;
 
-use Uwcoenvws\Importkit\Parsers\BaseParser;
+use Utilws\Importkit\Parsers\BaseParser;
 
 class ParseTagType extends BaseParser
 {

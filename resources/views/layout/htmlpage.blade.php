@@ -59,14 +59,14 @@
     </div> <!-- /.layout__wrapper -->
     <div class="layout__footer footer">
         <div>
-            <a href="mailto:itreq@uw.edu?subject=UWORG%20Website%20Question">@icon('envelope') Contact</a> &bull;
-            <a href="https://uw.edu/uworg">Help</a> &bull;
-            <a href="http://www.washington.edu/online/privacy">Privacy</a> &bull;
-            <a href="http://www.washington.edu/online/terms">Terms</a>
+            <a href="mailto:{{config('custom.scl_email_helpdesk')}}?subject={{config('custom.scl_short_camelcase')}}%20Treq%20Question">@icon('envelope') Contact</a> &bull;
+            <a href="{{config('custom.scl_url_help')}}">Help</a> &bull;
+            <a href="{{config('custom.scl_url_privacy')}}">Privacy</a> &bull;
+            <a href="{{config('custom.scl_url_terms')}}">Terms</a>
         </div>
         <div class="copyright">
-            <a href="https://uw.edu/uworg">&#169;{{ date('Y') }} UW Information School</a>,
-            <a href="http://www.seattle.gov/">Seattle, Washington</a>
+            <a href="{{config('custom.scl_url_portal')}}">&#169;{{ date('Y') }} {{config('custom.scl_long')}}</a>,
+            <a href="{{config('custom.scl_url_gov')}}">{{config('custom.scl_city_state')}}</a>
         </div>
     </div>
     <div class="modal right fade" id="_modal" tabindex="-1" role="dialog" style="display:none;">

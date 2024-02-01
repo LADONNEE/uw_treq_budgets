@@ -15,6 +15,6 @@ mix.options({
                 Popper: ['popper.js', 'default'],
                 Promise: 'es6-promise-promise'
             }),
-            new webpack.IgnorePlugin(/\.\/locale$/)
+            new webpack.IgnorePlugin({ resourceRegExp: /\.\/locale$/ })
         ]
     });

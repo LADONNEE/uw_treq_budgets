@@ -8,7 +8,6 @@ use App\Updaters\Translator\ImportTranslatorJob;
 
 /**
  * Import Workday worktags to Budget Number mapping from the FDM Translator tool
- * https://uwft-prodweb1.s.uw.edu/FDMTWEB/
  */
 class ImportTranslator extends CommandWithLogging
 {

@@ -5,7 +5,7 @@ use App\Contracts\HasNames;
 use App\Models\Contact;
 use App\Models\Person;
 use App\Models\Role;
-use Uworgws\Aclkit\Contracts\UserWithRoles;
+use Utilws\Aclkit\Contracts\UserWithRoles;
 
 class User implements HasNames, UserWithRoles
 {

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package edu.uw.org.pcore
+ * @package app.treq.pcore
  */
 /**
  * Converts an object graph into a simple array, for example report output to be presented as CSV view
